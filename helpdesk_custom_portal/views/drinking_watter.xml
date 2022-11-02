@@ -40,6 +40,7 @@
 
 
         <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="menu_complain_issue_confj" name="الشكاوي" action="drinking_watter_action" sequence="2" parent="helpdesk.helpdesk_menu_config"/>
         <menuitem id="menu_drinking_watter" name="مياه الشرب" action="drinking_watter_action"
                   sequence="2" parent="helpdesk_custom_portal.menu_complain_issue_confj"/>
     </data>

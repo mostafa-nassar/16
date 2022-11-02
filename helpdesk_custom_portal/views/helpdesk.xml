@@ -65,5 +65,4 @@
             </xpath>
         </field>
         </record>
-        <menuitem id="menu_complain_issue_confj" name="الشكاوي" action="drinking_watter_action" sequence="2" parent="helpdesk.helpdesk_menu_config"/>
 </odoo>
