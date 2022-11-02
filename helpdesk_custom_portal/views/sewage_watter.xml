@@ -1,0 +1,46 @@
+<odoo>
+    <data>
+        <record id="sewage_tree_view" model="ir.ui.view">
+            <field name="name">مياه الصرف الصحي</field>
+            <field name="model">sewage.water</field>
+            <field name="arch" type="xml">
+                <tree string="مياه الصرف الصحي">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="sewage_form_view" model="ir.ui.view">
+            <field name="name">مياه الصرف الصحي</field>
+            <field name="model">sewage.water</field>
+            <field name="arch" type="xml">
+                <form string="مياه الصرف الصحي">
+                    <sheet>
+                            <field name="name"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="sewage_action" model="ir.actions.act_window">
+            <field name="name">مياه الصرف الصحي</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sewage.water</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    <!-- Add Text Here -->
+                </p>
+                <p>
+                    <!-- More details about what a user can do with this object will be OK -->
+                </p>
+            </field>
+        </record>
+
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="menu_sewage" name="مياه الصرف الصحي" action="sewage_action"
+                  sequence="-1" parent="helpdesk_custom_portal.menu_complain_issue_confj"/>
+    </data>
+</odoo>

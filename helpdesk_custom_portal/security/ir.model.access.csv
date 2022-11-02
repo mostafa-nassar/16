@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_partner_state_zone_portal,partner.partner_state_zone,model_partner_state_zone,base.group_portal,1,0,0,0
+access_partner_state_zone,partner.partner_state_zone,model_partner_state_zone,,1,1,1,1
+access_drinking_watter,issue_drinking_watter,model_drinking_water,,1,1,1,1
+access_complain_issue,complain_issue,model_complain_issue,,1,1,1,1
+access_sewage_water,sewage_water,model_sewage_water,,1,1,1,1
+access_commercial_water,commercial_water,model_commercial_water,,1,1,1,1

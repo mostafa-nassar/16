@@ -1,0 +1,69 @@
+<odoo>
+        <record id="helpdesk_ticket_view_form_inherit_helpdesk" model="ir.ui.view">
+        <field name='name'>helpdesk.ticket.form.inherit</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="priority">90</field>
+        <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='email_cc']" position="after">
+                <field name="follower_phone"/>
+            </xpath>
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="state_area"/>
+            </xpath>
+            <xpath expr="//sheet" position="inside">
+                <notebook>
+                    <page string="Extra information">
+                        <group>
+                            <group string="Customer Information">
+                                <field name="customer_info_name"/>
+                                <field name="identification_number"/>
+                                <field name="door"/>
+                                <field name="customer_home_number"/>
+                                <field name="customer_home_address"/>
+                                <field name="public_street"/>
+                                <field name="public_street_near"/>
+
+                            </group>
+                        </group>
+                    </page>
+                    <page string="الشكوي">
+                        <group>
+                            <group>
+                                <field name="complain_issue_id"/>
+                                <field name="issue_type"/>
+                                <field name="complain_source"/>
+                                <field name="procedures"/>
+
+                            </group>
+                            <group attrs="{'invisible':[('issue_type','!=','drinking_water')]}">
+                                <field name="drinking_watter_id"/>
+                            </group>
+                            <group attrs="{'invisible':[('issue_type','!=','sewage')]}">
+                                <field name="sewage_watter_id"/>
+                            </group>
+                            <group attrs="{'invisible':[('issue_type','!=','commercial')]}">
+                                <field name="commercial_watter_id"/>
+                            </group>
+
+                            <group string="بيانات جودة المياه" attrs="{'invisible':[('quality','!=',True)]}">
+                                <field name="quality" invisible="1"/>
+                                <field name="water_dark_color"/>
+                                <field name="water_bad_smell"/>
+                                <field name="water_bad_teast"/>
+                            </group>
+                            <group string="بيانات المياه والفواتير" attrs="{'invisible':[('billing','!=',True)]}">
+                                    <field name="billing" invisible="1"/>
+                                    <field name="motor"/>
+                                    <field name="water_safe"/>
+                                    <field name="sup_number"/>
+                                    <field name="zone_number"/>
+                            </group>
+                        </group>
+                    </page>
+                </notebook>
+            </xpath>
+        </field>
+        </record>
+        <menuitem id="menu_complain_issue_confj" name="الشكاوي" action="drinking_watter_action" sequence="2" parent="helpdesk.helpdesk_menu_config"/>
+</odoo>

@@ -1,0 +1,60 @@
+<odoo>
+    <data>
+        <record id="complain_issue_tree_view" model="ir.ui.view">
+            <field name="name">تصنيف الشكوي</field>
+            <field name="model">complain.issue</field>
+            <field name="arch" type="xml">
+                <tree string="تصنيف الشكوي">
+                    <field name="name"/>
+                    <field name="drinking_watter" widget="many2many_tags"/>
+                    <field name="quality"/>
+                    <field name="billing"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="complain_issue_form_view" model="ir.ui.view">
+            <field name="name">تصنيف الشكوي</field>
+            <field name="model">complain.issue</field>
+            <field name="arch" type="xml">
+                <form string="تصنيف الشكوي">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="issue_type" required="1"/>
+                            <field name="drinking_watter" widget="many2many_checkboxes"
+                                   attrs="{'invisible':[('issue_type','!=','drinking_water')]}"/>
+                            <field name="sewage_watter" widget="many2many_checkboxes"
+                                   attrs="{'invisible':[('issue_type','!=','sewage')]}"/>
+                            <field name="commercial_watter" widget="many2many_checkboxes"
+                                   attrs="{'invisible':[('issue_type','!=','commercial')]}"/>
+                            <field name="quality"/>
+                            <field name="billing"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="complain_issue_action" model="ir.actions.act_window">
+            <field name="name">تصنيف الشكوي</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">complain.issue</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    <!-- Add Text Here -->
+                </p>
+                <p>
+                    <!-- More details about what a user can do with this object will be OK -->
+                </p>
+            </field>
+        </record>
+
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="menu_complain_issue" name="تصنيف الشكوي" action="helpdesk_custom_portal.complain_issue_action"
+                  sequence="-10" parent="helpdesk_custom_portal.menu_complain_issue_confj"/>
+    </data>
+</odoo>
