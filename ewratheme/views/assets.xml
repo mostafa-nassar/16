@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- <template id="assets_frontend" name="My style" inherit_id="website.assets_frontend">
+    <xpath expr="link[last()]" position="after">
+        <link rel="stylesheet" type="text/scss" href="/ewratheme/static/scss/style.scss"/>
+    </xpath>
+</template> -->
+
+
+<!-- <record id="ewratheme.style_css" model="theme.ir.asset">
+    <field name="key">ewratheme.style_css</field>
+    <field name="name">style SCSS</field>
+      <field name="bundle">web._assets_frontend_helpers</field>
+    <field name="directive">prepend</field>
+    <field name="path">ewratheme/static/src/scss/style.scss</field>
+</record> -->
+<template id="websitetabfotter" inherit_id="website.layout" name="Custom Layout">
+        <xpath expr="//body" position="after">
+
+        
+       <!-- <div id="preloader"><div class="spinner-border color-highlight" role="status"></div></div> -->
+        <div id="wrapwrap"><div id="footer-bar" class="footer-bar-1">
+        <a href="index.html" class="active-nav"><i class="fa fa-home"></i><span>Home</span></a>
+        <a href="index-components.html"><i class="fa fa-star"></i><span>Features</span></a>
+        <a href="index-pages.html"><i class="fa fa-heart"></i><span>Pages</span></a>
+        <a href="index-search.html"><i class="fa fa-search"></i><span>Search</span></a>
+        <a href="#" data-menu="menu-settings"><i class="fa fa-cog"></i><span>Settings</span></a>
+   </div></div>
+    
+    
+    <!-- <script type="text/javascript" src="/ewratheme/static/scripts/custom.js"></script> -->
+          </xpath>
+    </template>
+
+<template id="websitecontent" inherit_id="website.layout" name="Custom Layout">
+       <!--  <xpath expr="//main" position="replace">
+            <main id="page">
+                <div id="wrap" class="oe_structure oe_empty" data-oe-model="ir.ui.view" data-oe-id="460" data-oe-field="arch" >
+                    
+
+                </div>
+                      
+           
+            </main>
+   
+                        
+    
+   <script type="text/javascript" src="/ewratheme/static/src/scripts/custom.js"></script> 
+          </xpath>-->
+
+          <xpath expr="//main" position="attributes">
+            <attribute name="id">page</attribute>
+        </xpath>
+    </template>
+ 
+
+</odoo>

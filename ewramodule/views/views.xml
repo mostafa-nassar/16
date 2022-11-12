@@ -1,0 +1,371 @@
+<odoo>
+  <data>
+    <menuitem id="menu_waterconfig" name="EWRA" parent="helpdesk.menu_helpdesk_root" groups="base.group_user" sequence="10" />
+
+    
+<record id="ticket_classfication_view_form" model="ir.ui.view">
+  <field name="name">ticket_classfication.view.form</field>
+  <field name="model">ticket.classfication</field>
+  <field name="arch" type="xml">
+    <form string="تصنيفات الشكاوي">
+      <sheet>
+        <group>
+          <field name="name"/>
+          
+        </group>
+      </sheet>
+    </form>
+  </field>
+</record>
+
+<record id="ticketclassification_view_tree" model="ir.ui.view">
+  <field name="name">ticketclassification.view.tree</field>
+  <field name="model">ticket.classfication</field>
+  <field name="arch" type="xml">
+    <tree string="تصنيفات الشكاوي">
+      <field name="name"/>
+    </tree>
+  </field>
+</record>
+
+<record id="ticketClassification_action" model="ir.actions.act_window">
+    <field name="type">ir.actions.act_window</field>
+    <field name="name">تصنيفات الشكاوي</field>
+  
+    <field name="res_model">ticket.classfication</field>
+    <field name="view_mode">tree,form</field>
+  
+</record>
+
+
+    <menuitem id="menu_ticketclassfication" name="تصنيفات الشكاوي" action="ticketClassification_action"
+      sequence="10" groups="base.group_user" parent="menu_waterconfig"/>
+<!-- *************************************************** -->
+<record id="ticket_reason_view_form" model="ir.ui.view">
+  <field name="name">ticket.reason.view.form</field>
+  <field name="model">ticket.reason</field>
+  <field name="arch" type="xml">
+    <form string="سبب الشكوي">
+      <sheet>
+        <group>
+          <field name="name"/>
+          
+        </group>
+      </sheet>
+    </form>
+  </field>
+</record>
+
+<record id="ticket_reason_view_tree" model="ir.ui.view">
+  <field name="name">ticket_reason.view.tree</field>
+  <field name="model">ticket.reason</field>
+  <field name="arch" type="xml">
+    <tree string="سبب الشكوي">
+      <field name="name"/>
+    </tree>
+  </field>
+</record>
+
+<record id="ticketreason_action" model="ir.actions.act_window">
+    <field name="type">ir.actions.act_window</field>
+    <field name="name">سبب الشكوي</field>
+  
+    <field name="res_model">ticket.reason</field>
+    <field name="view_mode">tree,form</field>
+  
+</record>
+
+
+    <!-- <menuitem id="menu_ticketreason" name="سبب الشكوي" action="ticketreason_action"
+      sequence="10" groups="base.group_user" parent="menu_waterconfig"/> -->
+
+<!-- ***************************************************************************************** -->
+
+<record id="ticket_type_view_form" model="ir.ui.view">
+  <field name="name">ticket.type.view.form</field>
+  <field name="model">ticket.type</field>
+  <field name="arch" type="xml">
+    <form string="نوع الشكوي">
+      <sheet>
+        <group>
+          <field name="name"/>
+          <field name="TicketClassfication"/>
+          
+        </group>
+      </sheet>
+    </form>
+  </field>
+</record>
+
+<record id="ticket_type_view_tree" model="ir.ui.view">
+  <field name="name">ticket_type.view.tree</field>
+  <field name="model">ticket.type</field>
+  <field name="arch" type="xml">
+    <tree string="نوع الشكوي">
+      <field name="name"/>
+    </tree>
+  </field>
+</record>
+
+<record id="tickettype_action" model="ir.actions.act_window">
+    <field name="type">ir.actions.act_window</field>
+    <field name="name">نوع الشكوي</field>
+  
+    <field name="res_model">ticket.type</field>
+    <field name="view_mode">tree,form</field>
+  
+</record>
+
+
+    <menuitem id="menu_tickettype" name="نوع الشكوي" action="tickettype_action"
+      sequence="10" groups="base.group_user" parent="menu_waterconfig"/>
+
+
+
+<!-- ***************************************************************************************** -->
+
+<record id="governate_view_form" model="ir.ui.view">
+  <field name="name">governate.view.form</field>
+  <field name="model">ewra_governate</field>
+  <field name="arch" type="xml">
+    <form string="المحافظات">
+      <sheet>
+        <group>
+          <field name="name"/>
+        
+          
+        </group>
+      </sheet>
+    </form>
+  </field>
+</record>
+
+<record id="governate_type_view_tree" model="ir.ui.view">
+  <field name="name">governate.view.tree</field>
+  <field name="model">ewra_governate</field>
+  <field name="arch" type="xml">
+    <tree string="">
+      <field name="name"/>
+    </tree>
+  </field>
+</record>
+
+<record id="governates_action" model="ir.actions.act_window">
+    <field name="type">ir.actions.act_window</field>
+    <field name="name">المحافظات</field>
+  
+    <field name="res_model">ewra_governate</field>
+    <field name="view_mode">tree,form</field>
+  
+</record>
+
+
+    <menuitem id="menu_governates" name="المحافظات" action="governates_action"
+      sequence="10" groups="base.group_user" parent="menu_waterconfig"/>
+<!-- ***************************************************************************************** -->
+
+<record id="reportingway_view_form" model="ir.ui.view">
+  <field name="name">reportingway.view.form</field>
+  <field name="model">reportingway</field>
+  <field name="arch" type="xml">
+    <form string="وسيلة الإبلاغ">
+      <sheet>
+        <group>
+          <field name="name"/>
+        
+          
+        </group>
+      </sheet>
+    </form>
+  </field>
+</record>
+
+<record id="reportingway_type_view_tree" model="ir.ui.view">
+  <field name="name">reportingway.view.tree</field>
+  <field name="model">reportingway</field>
+  <field name="arch" type="xml">
+    <tree string="">
+      <field name="name"/>
+    </tree>
+  </field>
+</record>
+
+<record id="reportingway_action" model="ir.actions.act_window">
+    <field name="type">ir.actions.act_window</field>
+    <field name="name">وسيلة الإبلاغ</field>
+  
+    <field name="res_model">reportingway</field>
+    <field name="view_mode">tree,form</field>
+  
+</record>
+
+
+    <menuitem id="menu_reportingway" name="وسيلة الإبلاغ" action="reportingway_action"
+      sequence="10" groups="base.group_user" parent="menu_waterconfig"/>
+
+<!-- ***************************************************************************************** -->
+
+<!-- <record id="responsapleparty_view_form" model="ir.ui.view">
+  <field name="name">responsapleparty.view.form</field>
+  <field name="model">responsapleparty</field>
+  <field name="arch" type="xml">
+    <form string="الجهة المسئولة">
+      <sheet>
+        <group>
+          <field name="name"/>
+          <field name="serviceintroducer"/>
+
+          
+        
+          
+        </group>
+      </sheet>
+    </form>
+  </field>
+</record>
+
+<record id="responsapleparty_type_view_tree" model="ir.ui.view">
+  <field name="name">responsapleparty.view.tree</field>
+  <field name="model">responsapleparty</field>
+  <field name="arch" type="xml">
+    <tree string="">
+      <field name="name"/>
+
+    </tree>
+  </field>
+</record>
+
+<record id="responsapleparty_action" model="ir.actions.act_window">
+    <field name="type">ir.actions.act_window</field>
+    <field name="name">الجهة المسئولة </field>
+  
+    <field name="res_model">responsapleparty</field>
+    <field name="view_mode">tree,form</field>
+  
+</record>
+
+
+    <menuitem id="menu_responsapleparty" name="الجهة المسئولة " action="responsapleparty_action"
+      sequence="10" groups="base.group_user" parent="menu_waterconfig"/> -->
+
+<!-- ***************************************************************************************** -->
+<!-- 
+<record id="serviceintreducer_view_form" model="ir.ui.view">
+  <field name="name">serviceintreducer.view.form</field>
+  <field name="model">serviceintreducer</field>
+  <field name="arch" type="xml">
+    <form string="مقدم الخدمة">
+      <sheet>
+        <group>
+          <field name="name"/>
+          <field name="responsapleparty"/>
+        
+          
+        </group>
+      </sheet>
+    </form>
+  </field>
+</record>
+
+<record id="serviceintreducer_type_view_tree" model="ir.ui.view">
+  <field name="name">serviceintreducer.view.tree</field>
+  <field name="model">serviceintreducer</field>
+  <field name="arch" type="xml">
+    <tree string="">
+      <field name="name"/>
+    </tree>
+  </field>
+</record>
+
+<record id="serviceintreducer_action" model="ir.actions.act_window">
+    <field name="type">ir.actions.act_window</field>
+    <field name="name">مقدم الخدمة</field>
+  
+    <field name="res_model">serviceintreducer</field>
+    <field name="view_mode">tree,form</field>
+  
+</record>
+
+
+    <menuitem id="menu_serviceintreducer" name="مقدم الخدمة" action="serviceintreducer_action"
+      sequence="10" groups="base.group_user" parent="menu_waterconfig"/> -->
+
+      <!--  -->
+      <record id="res_partner_view_form" model="ir.ui.view">
+        <field name="name">res.partner.view.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='vat']" position="after">
+              
+                <!-- <field name="is_complaint"/>
+                <field name="is_responsable"/> -->
+                <field name="companytype" required="1" />
+                <field name="complainers"        attrs="{'invisible':[('companytype','=','complainers')]  }"
+                  domain="[('companytype', '=', 'complainers')]"  />
+            </xpath>
+        </field>
+    </record>
+<!-- ***************************************************************************************** -->
+
+<record id="reportingway_view_form" model="ir.ui.view">
+  <field name="name">reportingway.view.form</field>
+  <field name="model">reportingway</field>
+  <field name="arch" type="xml">
+    <form string="وسيلة الإبلاغ">
+      <sheet>
+        <group>
+          <field name="name"/>
+        
+          
+        </group>
+      </sheet>
+    </form>
+  </field>
+</record>
+
+<record id="reportingway_type_view_tree" model="ir.ui.view">
+  <field name="name">reportingway.view.tree</field>
+  <field name="model">reportingway</field>
+  <field name="arch" type="xml">
+    <tree string="">
+      <field name="name"/>
+    </tree>
+  </field>
+</record>
+
+<record id="reportingway_action" model="ir.actions.act_window">
+    <field name="type">ir.actions.act_window</field>
+    <field name="name">وسيلة الإبلاغ</field>
+  
+    <field name="res_model">reportingway</field>
+    <field name="view_mode">tree,form</field>
+  
+</record>
+
+
+    <menuitem id="menu_reportingway" name="وسيلة الإبلاغ" action="reportingway_action"
+      sequence="10" groups="base.group_user" parent="menu_waterconfig"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </data>
+</odoo>

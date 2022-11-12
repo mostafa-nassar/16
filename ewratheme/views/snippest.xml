@@ -1,0 +1,445 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <template id="ewra_complaint_form" name="ewra Shakawa">
+        <section class="complain">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 complainform">
+                        <br />
+                        <div class="card card-primary">
+                            <div class="card-header ">
+                                <h3 class="card-title">شكوي جديده</h3>
+                            </div>
+                            <!-- <form method="post" action="/ewra-helpdesk/submit" role="form"
+                                class="js_accept_json js_website_submit_form new_helpdesk_form"
+                                id="helpdesk_form"> -->
+                                <!-- <form class="complainform"> -->
+                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+                            <div class="card-body align-center">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p>
+                                                حتى يقوم الجهاز بمباشرة مهامه نحو دراسة الشكوى , فيشترط:
+                                                <br />
+                                                1-أن يكون قد رفع شكواه إلى الشركة المختصة و لم يجد لها حلاً.
+                                                <br />
+                                                2- فى حالة الشكاوى المتعلقة بالفواتير والعدادات يجب إرفاق صورة فاتورة المياه أو إدخال رقم الحساب (اشتراك - منطقة)
+                                            </p>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <b> بيانات مقدم الشكوى</b>
+                                        </div>
+                                        <div class="col-12">
+
+                                            <div class="row">
+                                                <div class="col-md-6 col-lg-6 col-sm-10">
+                                                    <div class="form-group">
+                                                        <label class="col-md-12 col-form-label" for="partner_id">
+                                                            <span class="label_right">
+                                                                إسم الشاكى
+                                                                <span style="color:red">*</span>
+                                                            </span>
+                                                            <div class="input-group">
+                                                                <input id="complainer" name="complainer" type="text" class="form-control" />
+                                                            </div>
+
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6 col-lg-6 col-sm-10">
+                                                    <div class="form-group">
+                                                        <label class="col-md-12 col-form-label" for="partner_id">
+                                                            <span class="label_right">
+                                                                الرقم القومى
+                                                                <span style="color:red">*</span>
+                                                            </span>
+                                                            <div class="input-group">
+                                                                <input id="complainer_id" name="complainer_id" type="text" class="form-control" />
+                                                            </div>
+
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-md-6 col-sm-10">
+                                                    <div class="form-group">
+                                                        <label class="col-md-12 col-form-label" for="partner_id">
+                                                            <span class="label_right">
+                                                                المحافظة
+                                                                <span style="color:red">*</span>
+                                                            </span>
+                                                            <div class="input-group">
+                                                                <select name="governate" id="governate" class="form-control">
+                                                                   
+                                                                </select>
+                                                            </div>
+
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6 col-sm-10">
+                                                    <div class="form-group">
+                                                        <label class="col-md-12 col-form-label" for="partner_id">
+                                                            <span class="label_right">
+                                                                قسم/ قرية/ مركز
+                                                                <span style="color:red">*</span>
+                                                            </span>
+                                                            <div class="input-group">
+                                                                <input name="city" id="city" type="text" class="form-control" />
+                                                            </div>
+
+                                                        </label>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="row">
+
+                                                <div class="col-md-12 col-sm-10">
+                                                    <div class="form-group">
+                                                        <label class="col-md-12 col-form-label" for="partner_id">
+                                                            <span class="label_right">
+                                                                عنوان الشاكى
+                                                                <span style="color:red">*</span>
+                                                            </span>
+                                                            <div class="input-group">
+                                                                <input id="adress" name="adress" type="text" class="form-control" />
+                                                            </div>
+
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="row">
+
+
+                                                <div class="col-md-6 col-lg-6 col-sm-10">
+                                                    <div class="form-group">
+                                                        <label class="col-md-12 col-form-label" for="partner_id">
+                                                            <span class="label_right">
+                                                                تليفون العميل
+                                                                <span style="color:red">*</span>
+                                                            </span>
+                                                            <div class="input-group">
+                                                                <input id="tele" name="tele" type="text" class="form-control" />
+                                                            </div>
+
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-md-6 col-lg-6 col-sm-10">
+                                                    <div class="form-group">
+                                                        <label class="col-md-12 col-form-label" for="partner_id">
+                                                            <span class="label_right">
+                                                                البريد الإلكتروني
+                                                                <span style="color:red">*</span>
+                                                            </span>
+                                                            <div class="input-group">
+                                                                <input id="email" name="email" type="email" class="form-control" />
+                                                            </div>
+
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="col-12">
+                                                <b> بيانات الشكوى
+                                            </b>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-md-6 col-sm-10">
+                                                    <div class="form-group">
+                                                        <label class="col-md-12 col-form-label" for="partner_id">
+                                                            <span class="label_right">
+                                                                نوع الشكوى
+                                                                <span style="color:red">*</span>
+                                                            </span>
+                                                            <div class="input-group">
+                                                                <select name="complain_class" id="complain_class" class="complain_class form-control">
+                                                                   
+                                                                </select>
+                                                            </div>
+
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6 col-sm-10">
+                                                    <div class="form-group">
+                                                        <label class="col-md-12 col-form-label" for="partner_id">
+                                                            <span class="label_right">
+                                                                سبب الشكوي
+                                                                <span style="color:red">*</span>
+                                                            </span>
+                                                            <div class="input-group">
+                                                                <select name="complain_type" id="complain_type" class="form-control">
+                                                                    
+                                                                </select>
+                                                            </div>
+
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-md-6 col-sm-10">
+                                                    <div class="form-group">
+                                                        <label class="col-md-12 col-form-label" for="partner_id">
+                                                            <span class="label_right">
+                                                                الجهة المسئولة
+                                                                <span style="color:red">*</span>
+                                                            </span>
+                                                            <div class="input-group">
+                                                                <select name="responsable" id="responsable" class="form-control">
+                                                             
+                                                                </select>
+                                                            </div>
+
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6 col-sm-10">
+                                                    <div class="form-group">
+                                                        <label class="col-md-12 col-form-label" for="partner_id">
+                                                            <span class="label_right">
+                                                                مقدم الخدمة
+                                                                <span style="color:red">*</span>
+                                                            </span>
+                                                            <div class="input-group">
+                                                                <select name="introducer" id="introducer" class="form-control">
+                                                                
+                                                                </select>
+                                                            </div>
+
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-12">
+                                                <b>فى حالة الشكاوى التجارية وشكاوى الفواتير
+
+                                                </b>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-md-6 col-sm-10">
+                                                    <div class="form-group">
+                                                        <label class="col-md-12 col-form-label" for="partner_id">
+                                                            <span class="label_right">
+                                                                رقم الاشتراك
+                                                                <span style="color:red">*</span>
+                                                            </span>
+                                                            <div class="input-group">
+                                                                <input id="Subscription_id" name="Subscription_id" type="text" class="form-control" />
+                                                            </div>
+
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6 col-sm-10">
+                                                    <div class="form-group">
+                                                        <label class="col-md-12 col-form-label" for="partner_id">
+                                                            <span class="label_right">
+                                                                رقم المنطقة
+                                                                <span style="color:red">*</span>
+                                                            </span>
+                                                            <div class="input-group">
+                                                                <input id="origin_num" name="origin_num" type="text" class="form-control" />
+                                                            </div>
+
+                                                        </label>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12">
+                                                <b>
+                                                    إبلاغ مقدم الخدمة
+
+
+                                                </b>
+                                            </div>
+
+
+                                            
+
+                                                <div class="row">
+                                                    <div class="col-md-6 col-sm-10">
+                                                        <div class="form-group">
+                                                            <label class="col-md-12 col-form-label" for="partner_id">
+                                                                <span class="label_right">
+                                                                    وسيلة الإبلاغ
+                                                                    <span style="color:red">*</span>
+                                                                </span>
+                                                                <div class="input-group">
+                                                                    <select name="reportingway" id="reportingway" class="form-control">
+                                                                        
+                                                                    </select>
+                                                                </div>
+
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6 col-sm-10">
+                                                        <div class="form-group">
+                                                            <label class="col-md-12 col-form-label" for="partner_id">
+                                                                <span class="label_right">
+                                                                    كود الشكوى
+                                                                    <span style="color:red">*</span>
+                                                                </span>
+                                                                <div class="input-group">
+                                                                    <input id="reporting_id" name="reporting_id" type="text" class="form-control" />
+                                                                </div>
+
+                                                            </label>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-sm-10">
+                                                        <div class="form-group">
+                                                            <label class="col-md-12 col-form-label" for="partner_id">
+                                                                <span class="label_right">
+                                                                    تاريخ الإبلاغ
+                                                                    <span style="color:red">*</span>
+                                                                </span>
+                                                                <div class="input-group">
+                                                                    <input id="reportdate" name="reportdate"  class="form-control" type="date"/>
+                                                                </div>
+
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6 col-sm-10">
+                                                        <div class="form-group">
+                                                            <label class="col-md-12 col-form-label" for="partner_id">
+                                                                <span class="label_right">
+                                                                    تاريخ رد الشركة
+                                                                    <span style="color:red">*</span>
+                                                                </span>
+                                                                <div class="input-group">
+                                                                    <input id="replay_date" name="replay_date" type="date" class="form-control" />
+                                                                </div>
+
+                                                            </label>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-md-12 col-sm-10">
+                                                        <div class="form-group">
+                                                            <label class="col-md-12 col-form-label" for="partner_id">
+                                                                <span class="label_right">
+                                                                    رد مقدم الخدمة
+                                                                    <span style="color:red">*</span>
+                                                                </span>
+                                                                <div class="input-group">
+                                                                    <input id="replay" name="replay" type="text" class="form-control" />
+                                                                </div>
+
+                                                            </label>
+                                                        </div>
+
+                                                    </div>
+
+
+                                                </div>
+
+
+                                            
+
+
+
+
+
+
+
+
+
+                                            
+                                            
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="form-group">
+                                                        <label class="col-md-12 col-form-label" for="partner_id">
+                                                            <span class="label_right">
+                                                                بيانات تفصيلية عن الشكوى تملاء عن طريق الشاكى
+                                                                <span style="color:red">*</span>
+                                                            </span>
+                                                            <div class="input-group">
+                                                                <textarea id="details" name="details" class="form-control" />
+                                                            </div>
+
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                
+
+                                            </div>
+
+
+                                            <!-- end fom -->
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button id="sendhelpdesk" name="sendhelpdesk" class="btn btn-primary helpdesk_send">ارسال</button>
+                            </div>
+                        
+                        </div>
+
+                    <!-- </form> -->
+                        <!-- </form> -->
+                    </div>
+                </div>
+            </div>
+            <br />
+
+        </section>
+    </template>
+
+    <template id="placeof_inqueries" name="ewra Enqueries" inherit_id="website.snippets">
+
+        <xpath expr="//div[@id='snippet_feature']//t[@t-snippet][last()]" position="after">
+            <t t-snippet="ewratheme.ewra_complaint_form"
+                t-thumbnail="/ewratheme/static/src/img/ui/snippet_thumb.png" />
+        </xpath>
+
+    </template>
+</odoo>
