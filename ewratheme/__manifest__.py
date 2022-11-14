@@ -20,13 +20,13 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['theme_common','helpdesk','contacts','ewramodule'],
+    'depends': ['theme_common','helpdesk','contacts'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
         'views/assets.xml',
-        "views/snippest.xml",
+       # "views/snippest.xml",
         'views/views.xml',
         'views/templates.xml',
     ],
@@ -38,7 +38,7 @@
         'web.assets_frontend':[
             "https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900,900i&display=swap",
             'ewratheme/static/src/scss/style.css',
-            'ewratheme/static/src/js/ewra_ticketsubmit.js',
+            # 'ewratheme/static/src/js/ewra_ticketsubmit.js',
             
             
         ],

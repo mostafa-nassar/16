@@ -27,5 +27,28 @@ d
       <field name="sequence" type="int">60</field>
   </record> -->
 
+<!--
+
+help disk form view
+help disk form view
+
+Inherited Views
+
+- - - - - - - - - helpdesk.ticket
+- Model·········: helpdesk.ticket
+- Base Module···: helpdesk.ticket
+- Mode··········: primary|extension
+- View priority·: 16
+- - - - - - - - - model
+
+-->
+
+
+
+<!-- primary|extension Inherited .:Form:. view for "model" -->
+
+
+
+
   </data>
 </odoo>

@@ -91,6 +91,7 @@ publicWidget.registry.complainInit= publicWidget.Widget.extend({
             'change .complain_class':'changecomplainclass',
             'change #responsable':'responsablechange',
             'click #sendhelpdesk':'SubmitHelpDeskForm',
+            
         },
         changecomplainclass:function(event){
             $("#complain_type").empty();
@@ -126,7 +127,8 @@ publicWidget.registry.complainInit= publicWidget.Widget.extend({
 
 
         SubmitHelpDeskForm:function(event){
-            
+    //alert("ddd");
+    //return;
         }
     
 

@@ -3,14 +3,13 @@
     'name': "ewramodule",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        theis is ewra modules contain all ewra logic copy right reserved""",
 
     'description': """
-        Long description of module's purpose
+        theis is ewra modules contain all ewra logic copy right reserved
     """,
 
-    'author': "My Company",
+    'author': "Ahmed Abd Al Aziz",
     'website': "https://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
@@ -20,16 +19,30 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','helpdesk'],
+    'depends': ['base','helpdesk','contacts','website'],
 
     # always loaded
     'data': [
         'security/ir.model.access.csv',
         'views/views.xml',
+        "views/snippest.xml",
+        'views/helpdeskticket.xml',
         'views/templates.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
     ],
+    'assets':{
+        'web.assets_frontend':[
+            # "https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900,900i&display=swap",
+            # 'ewratheme/static/src/scss/style.css',
+            'ewramodule/static/src/js/ewra_ticketsubmit.js',
+            
+            
+        ],
+        'web.assets_qweb': [
+          
+            ],
+        },
 }

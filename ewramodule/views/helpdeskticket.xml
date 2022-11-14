@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="inhert_helpdesk_ticket_view_complain_form" model="ir.ui.view">
+        <field name="name">view.model.complain.form.inherited</field>
+        <field name="model">helpdesk.ticket</field>
+        <!-- Please veryfiy, that the following inherited view really sticks to the naming convention. -->
+        <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form" />
+        <field name="type">form</field>
+        <!-- <field name="mode">primary|extension</field> -->
+        <field name="priority" eval="16" />
+        <field name="active" eval="True" />
+        <field name="arch" type="xml">
+            
+            <xpath expr="//field[@name='description']" position="after">
+              <notebook >
+                <page name="Client Data" string="بيانات العميل">
+                  <group name="">
+                    
+                  <field name="complainername" />
+                  <field name="national_id"/>
+                  <field name="complainer_tele"/>
+                  <field name="complaineremail" />
+                  <field name="governate" />
+                  <field name="city"/>
+                  <field name="adress"/>
+                </group>
+                </page>
+                <page name="complain data" string="بيانات الشكوي">
+                  <group>                  
+                    <group name="" >
+                    <field name="complaintype"/>
+                    <field name="complainreason"/>
+                    <field name="responsableparty"/>
+                    <field name="serviceprovider"/>
+                    <field name="reportingway"/>
+                  </group>
+                  <group name="" >
+                    <field name="subscriptionnumber" />
+                    <field name="areanumber" />
+                    <field name="reportingcode" />
+                    <field name="complaindate" />
+                    <field name="complainresponsedate" />
+                    <field name="providerresponse" />
+                  </group>
+                </group>
+
+                </page>
+              </notebook>
+            </xpath>
+            
+        </field>
+    </record>
+    
+
+</odoo>

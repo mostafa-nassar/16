@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
 
-    <template id="ewra_complaint_form" name="ewra Shakawa">
+    <template id="ewra_complaint_form" name="ewra Complains">
         <section class="complain">
             <div class="container">
                 <div class="row">
@@ -14,7 +14,7 @@
                             <!-- <form method="post" action="/ewra-helpdesk/submit" role="form"
                                 class="js_accept_json js_website_submit_form new_helpdesk_form"
                                 id="helpdesk_form"> -->
-                                <!-- <form class="complainform"> -->
+                                <form id="complainform" class="complainform" method="post" action="/ewra-helpdesk/submit">
                             <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
                             <div class="card-body align-center">
                                 <div class="card-body">
@@ -43,7 +43,7 @@
                                                                 <span style="color:red">*</span>
                                                             </span>
                                                             <div class="input-group">
-                                                                <input id="complainer" name="complainer" type="text" class="form-control" />
+                                                                <input required="" id="complainer" name="complainer" type="text" class="form-control" />
                                                             </div>
 
                                                         </label>
@@ -58,7 +58,7 @@
                                                                 <span style="color:red">*</span>
                                                             </span>
                                                             <div class="input-group">
-                                                                <input id="complainer_id" name="complainer_id" type="text" class="form-control" />
+                                                                <input required="" id="complainer_id" name="complainer_id" type="text" class="form-control" />
                                                             </div>
 
                                                         </label>
@@ -418,13 +418,14 @@
                                     </div>
                                 </div>
                             </div>
+  </form>
                             <div class="card-footer">
-                                <button id="sendhelpdesk" name="sendhelpdesk" class="btn btn-primary helpdesk_send">ارسال</button>
+                                <button id="sendhelpdesk" name="sendhelpdesk" class="btn btn-primary helpdesk_send" form="complainform" type='submit'>ارسال</button>
                             </div>
                         
                         </div>
 
-                    <!-- </form> -->
+                  
                         <!-- </form> -->
                     </div>
                 </div>
@@ -437,8 +438,8 @@
     <template id="placeof_inqueries" name="ewra Enqueries" inherit_id="website.snippets">
 
         <xpath expr="//div[@id='snippet_feature']//t[@t-snippet][last()]" position="after">
-            <t t-snippet="ewratheme.ewra_complaint_form"
-                t-thumbnail="/ewratheme/static/src/img/ui/snippet_thumb.png" />
+            <t t-snippet="ewramodule.ewra_complaint_form"
+                t-thumbnail="/ewramodule/static/src/img/ui/snippet_thumb.png" />
         </xpath>
 
     </template>
