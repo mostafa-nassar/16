@@ -43,7 +43,9 @@
                                                                 <span style="color:red">*</span>
                                                             </span>
                                                             <div class="input-group">
-                                                                <input required="" id="complainer" name="complainer" type="text" class="form-control" />
+                                                                <input 
+                                                                required="1"
+                                                                  id="complainer" name="complainer" type="text" class="form-control" />
                                                             </div>
 
                                                         </label>
@@ -58,7 +60,7 @@
                                                                 <span style="color:red">*</span>
                                                             </span>
                                                             <div class="input-group">
-                                                                <input required="" id="complainer_id" name="complainer_id" type="text" class="form-control" />
+                                                                <input required="1" id="complainer_id" name="complainer_id" type="text" class="form-control" />
                                                             </div>
 
                                                         </label>
@@ -77,7 +79,7 @@
                                                                 <span style="color:red">*</span>
                                                             </span>
                                                             <div class="input-group">
-                                                                <select name="governate" id="governate" class="form-control">
+                                                                <select required="1" name="governate" id="governate" class="form-control">
                                                                    
                                                                 </select>
                                                             </div>
@@ -94,7 +96,7 @@
                                                                 <span style="color:red">*</span>
                                                             </span>
                                                             <div class="input-group">
-                                                                <input name="city" id="city" type="text" class="form-control" />
+                                                                <input required="1" name="city" id="city" type="text" class="form-control" />
                                                             </div>
 
                                                         </label>
@@ -115,7 +117,7 @@
                                                                 <span style="color:red">*</span>
                                                             </span>
                                                             <div class="input-group">
-                                                                <input id="adress" name="adress" type="text" class="form-control" />
+                                                                <input required="1" id="adress" name="adress" type="text" class="form-control" />
                                                             </div>
 
                                                         </label>
@@ -136,7 +138,7 @@
                                                                 <span style="color:red">*</span>
                                                             </span>
                                                             <div class="input-group">
-                                                                <input id="tele" name="tele" type="text" class="form-control" />
+                                                                <input required="1" id="tele" name="tele" type="text" class="form-control" />
                                                             </div>
 
                                                         </label>
@@ -152,7 +154,7 @@
                                                                 <span style="color:red">*</span>
                                                             </span>
                                                             <div class="input-group">
-                                                                <input id="email" name="email" type="email" class="form-control" />
+                                                                <input required="1" id="email" name="email" type="email" class="form-control" />
                                                             </div>
 
                                                         </label>
@@ -164,6 +166,7 @@
                                             <div class="col-12">
                                                 <b> بيانات الشكوى
                                             </b>
+                                            <hr/>
                                             </div>
 
 
@@ -176,7 +179,7 @@
                                                                 <span style="color:red">*</span>
                                                             </span>
                                                             <div class="input-group">
-                                                                <select name="complain_class" id="complain_class" class="complain_class form-control">
+                                                                <select required="1" name="complain_class" id="complain_class" class="complain_class form-control">
                                                                    
                                                                 </select>
                                                             </div>
@@ -193,7 +196,7 @@
                                                                 <span style="color:red">*</span>
                                                             </span>
                                                             <div class="input-group">
-                                                                <select name="complain_type" id="complain_type" class="form-control">
+                                                                <select required="1" name="complain_type" id="complain_type" class="form-control">
                                                                     
                                                                 </select>
                                                             </div>
@@ -214,7 +217,7 @@
                                                                 <span style="color:red">*</span>
                                                             </span>
                                                             <div class="input-group">
-                                                                <select name="responsable" id="responsable" class="form-control">
+                                                                <select required="1" name="responsable" id="responsable" class="form-control">
                                                              
                                                                 </select>
                                                             </div>
@@ -231,7 +234,7 @@
                                                                 <span style="color:red">*</span>
                                                             </span>
                                                             <div class="input-group">
-                                                                <select name="introducer" id="introducer" class="form-control">
+                                                                <select required="1" name="introducer" id="introducer" class="form-control">
                                                                 
                                                                 </select>
                                                             </div>
@@ -245,6 +248,7 @@
                                                 <b>فى حالة الشكاوى التجارية وشكاوى الفواتير
 
                                                 </b>
+                                                <hr/>
                                             </div>
 
 
@@ -257,7 +261,7 @@
                                                                 <span style="color:red">*</span>
                                                             </span>
                                                             <div class="input-group">
-                                                                <input id="Subscription_id" name="Subscription_id" type="text" class="form-control" />
+                                                                <input required="1" id="Subscription_id" name="Subscription_id" type="text" class="form-control" />
                                                             </div>
 
                                                         </label>
@@ -272,7 +276,7 @@
                                                                 <span style="color:red">*</span>
                                                             </span>
                                                             <div class="input-group">
-                                                                <input id="origin_num" name="origin_num" type="text" class="form-control" />
+                                                                <input required="1" id="origin_num" name="origin_num" type="text" class="form-control" />
                                                             </div>
 
                                                         </label>
@@ -288,6 +292,7 @@
 
 
                                                 </b>
+                                                <hr/>
                                             </div>
 
 
@@ -302,7 +307,7 @@
                                                                     <span style="color:red">*</span>
                                                                 </span>
                                                                 <div class="input-group">
-                                                                    <select name="reportingway" id="reportingway" class="form-control">
+                                                                    <select required="1" name="reportingway" id="reportingway" class="form-control">
                                                                         
                                                                     </select>
                                                                 </div>
@@ -319,7 +324,7 @@
                                                                     <span style="color:red">*</span>
                                                                 </span>
                                                                 <div class="input-group">
-                                                                    <input id="reporting_id" name="reporting_id" type="text" class="form-control" />
+                                                                    <input required="1" id="reporting_id" name="reporting_id" type="text" class="form-control" />
                                                                 </div>
 
                                                             </label>
@@ -337,7 +342,7 @@
                                                                     <span style="color:red">*</span>
                                                                 </span>
                                                                 <div class="input-group">
-                                                                    <input id="reportdate" name="reportdate"  class="form-control" type="date"/>
+                                                                    <input required="1" id="reportdate" name="reportdate"  class="form-control" type="date"/>
                                                                 </div>
 
                                                             </label>
@@ -352,7 +357,7 @@
                                                                     <span style="color:red">*</span>
                                                                 </span>
                                                                 <div class="input-group">
-                                                                    <input id="replay_date" name="replay_date" type="date" class="form-control" />
+                                                                    <input required="1" id="replay_date" name="replay_date" type="date" class="form-control" />
                                                                 </div>
 
                                                             </label>
@@ -368,7 +373,7 @@
                                                                     <span style="color:red">*</span>
                                                                 </span>
                                                                 <div class="input-group">
-                                                                    <input id="replay" name="replay" type="text" class="form-control" />
+                                                                    <input required="1" id="replay" name="replay" type="text" class="form-control" />
                                                                 </div>
 
                                                             </label>
