@@ -1,6 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_ticket_classfication,access.ticket.classfication,model_ticket_classfication,base.group_user,1,1,1,1
-access_ticket_type,access.ticket.type,model_ticket_type,base.group_user,1,1,1,1
-access_ticket_reason,access.ticket.reason,model_ticket_reason,base.group_user,1,1,1,1
-access_ewra_governate,access.ewra_governate,model_ewra_governate,base.group_user,1,1,1,1
-access_reportingway,access.reportingway,model_reportingway,base.group_user,1,1,1,1
+access_ticket_classfication,access.ticket.classfication,model_ticket_classfication,base.group_public,1,1,1,1
+access_ticket_type,access.ticket.type,model_ticket_type,base.group_public,1,1,1,1
+access_ticket_reason,access.ticket.reason,model_ticket_reason,base.group_public,1,1,1,1
+access_ewra_governate,access.ewra_governate,model_ewra_governate,base.group_public,1,1,1,1
+access_reportingway,access.reportingway,model_reportingway,base.group_public,1,1,1,1
