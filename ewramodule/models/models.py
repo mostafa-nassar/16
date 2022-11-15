@@ -64,7 +64,7 @@ class ResPartner(models.Model):
     _inherit = 'res.partner'
     # is_complaint = fields.Boolean(string='مقدم خدمة')
     # is_responsable = fields.Boolean(string='الجهة المسئولة')
-    companytype=fields.Selection([('complainers','مقدم خدمة'),('responsable ','جهة المسئولة')],string="نوع الشركة")
+    companytype=fields.Selection([('complainers','مقدم خدمة'),('responsable','جهة المسئولة')],string="نوع الشركة")
     
     responsables=fields.Many2one(comodel_name="res.partner", string="الجهة المسئولة",)
     complainers=fields.One2many( string="مقدم خدمة",comodel_name="res.partner",inverse_name="responsables")
