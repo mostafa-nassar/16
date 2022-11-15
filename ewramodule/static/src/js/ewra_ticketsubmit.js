@@ -137,7 +137,7 @@ publicWidget.registry.complainInit= publicWidget.Widget.extend({
             // method: 'create_help_ticket_portal',
             //args: [{
                 route: '/ewra-complain_submit',
-                params: [{       
+                params: {       
                 'complainername':$(".complainform #complainer").val(),
                 'national_id':$(".complainform #complainer_id").val(),
                 'governate':$(".complainform #governate").find(":selected").val(),
@@ -159,7 +159,7 @@ publicWidget.registry.complainInit= publicWidget.Widget.extend({
                 'description':$(".complainform #details").val()
 
 
-            }],
+            },
         }).then(function (response) {
             if (response.errors) {
                 toastr.error('Something went wrong ' + response.errors + ' , try again.')
