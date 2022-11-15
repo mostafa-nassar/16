@@ -96,7 +96,7 @@
                                                                 <span style="color:red">*</span>
                                                             </span>
                                                             <div class="input-group">
-                                                                <input required="1" name="city" id="city" type="text" class="form-control" />
+                                                                <input  name="city" id="city" type="text" class="form-control" />
                                                             </div>
 
                                                         </label>
