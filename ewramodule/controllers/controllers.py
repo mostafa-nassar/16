@@ -37,7 +37,7 @@ class WebsiteHelpdesk_portal(http.Controller):
         governs=governments.mapped(lambda record: {'id':record.id ,'name': record.name})
         reportingways=request.env['reportingway'].search([])
         reportingway=reportingways.mapped(lambda record: {'id':record.id ,'name': record.name})
-        responsaplepartys=request.env['res.partner'].search([('companytype','=','complainers')])
+        responsaplepartys=request.env['res.partner'].search([('companytype','=','responsable')])
         responsapleparty=responsaplepartys.mapped(lambda record: {'id':record.id ,'name': record.name})
         return { 'classfications':classfication,'governments':governs,'reportingway':reportingway,'responsapleparty':responsapleparty}
         
