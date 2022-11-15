@@ -133,9 +133,11 @@ publicWidget.registry.complainInit= publicWidget.Widget.extend({
             e.stopPropagation();
          var self=this;
          this._rpc({
-            model: 'helpdesk.ticket',
-            method: 'create_help_ticket_portal',
-            args: [{
+            // model: 'helpdesk.ticket',
+            // method: 'create_help_ticket_portal',
+            //args: [{
+                route: '/ewra-complain_submit',
+                params: [{       
                 'complainername':$(".complainform #complainer").val(),
                 'national_id':$(".complainform #complainer_id").val(),
                 'governate':$(".complainform #governate").find(":selected").val(),

@@ -44,8 +44,8 @@ class ModelName(models.Model):
     def create_help_ticket_portal(self,vals):
         # if not (self.env.user.employee_id):
         #     raise AccessDenied()
-        # user = self.env.user
-        self = self.sudo()
+        #user = self.env.user
+        #self = self.sudo()
         values={
             'name': 'شكوي'+' '+ (vals['complainername'] if 'complainername' in vals else ''),
             'complainername':vals['complainername'] if 'complainername' in vals else False,
