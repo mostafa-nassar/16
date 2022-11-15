@@ -302,7 +302,7 @@
                 <field name="is_responsable"/> -->
                 <field name="companytype" required="1" />
                 <field name="responsables"        attrs="{'invisible':[('companytype','=','responsable')]  }"
-                  domain="[('companytype', '=', 'responsable')]"  />
+                  domain="[('companytype', '=', 'complainers')]"  />
             </xpath>
         </field>
     </record>
