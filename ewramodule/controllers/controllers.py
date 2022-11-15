@@ -109,7 +109,7 @@ class WebsiteHelpdesk_portal(http.Controller):
             # '':vals[''],
             
         }
-      request.env['helpdesk.ticket'].sudo().create(values)#create_help_ticket_portal(kwargs)
+      myissue=request.env['helpdesk.ticket'].sudo().create(values)#create_help_ticket_portal(kwargs)
       return {
             'code': """
             
