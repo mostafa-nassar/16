@@ -45,7 +45,7 @@ class ModelName(models.Model):
         # if not (self.env.user.employee_id):
         #     raise AccessDenied()
         # user = self.env.user
-        # self = self.sudo()
+        self = self.sudo()
         values={
             'name': 'شكوي'+' '+ (vals['complainername'] if 'complainername' in vals else ''),
             'complainername':vals['complainername'] if 'complainername' in vals else False,
@@ -71,8 +71,8 @@ class ModelName(models.Model):
             # '':vals[''],
             
         }
-        # tmp_issue = self.env['helpdesk.ticket'].sudo().new(values)
-        # values = tmp_issue._convert_to_write(tmp_issue._cache)
+        tmp_issue = self.env['helpdesk.ticket'].sudo().new(values)
+        values = tmp_issue._convert_to_write(tmp_issue._cache)
         myissue = self.env['helpdesk.ticket'].sudo().create(values)
         #raise UserWarning(str(myissue.id))
         return {
