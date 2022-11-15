@@ -4,4 +4,4 @@ access_ticket_type,access.ticket.type,model_ticket_type,,1,1,1,1
 access_ticket_reason,access.ticket.reason,model_ticket_reason,,1,1,1,1
 access_ewra_governate,access.ewra_governate,model_ewra_governate,,1,1,1,1
 access_reportingway,access.reportingway,model_reportingway,,1,1,1,1
-access_respartner_ewra,access.res.partner,model_res_partner,,1,0,0,0
+access_respartner_ewra,access.res_partner,model_res_partner,,1,0,0,0

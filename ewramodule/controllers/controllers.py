@@ -77,7 +77,7 @@ class WebsiteHelpdesk_portal(http.Controller):
         #issues = request.env['complain.issue'].search([])
         #drinking_watters = request.env['drinking.water'].search([])
         
-        introducers=request.env['res.partner'].search([('complainers','=',int(kwargs['id']))])
+        introducers=request.env['res.partner'].search([('responsables','=',int(kwargs['id']))])
         
         introducer=introducers.mapped(lambda record: {'id':record.id ,'name': record.name})
         return { 'types':introducer,}    
