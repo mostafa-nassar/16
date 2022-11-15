@@ -37,7 +37,7 @@ class WebsiteHelpdesk_portal(http.Controller):
         governs=governments.mapped(lambda record: {'id':record.id ,'name': record.name})
         reportingways=request.env['reportingway'].search([])
         reportingway=reportingways.mapped(lambda record: {'id':record.id ,'name': record.name})
-        responsaplepartys=request.env['res.partner'].search([('companytype','=','responsable')])
+        responsaplepartys=request.env['res.partner'].sudo().search([('companytype','=','responsable')])
         responsapleparty=responsaplepartys.mapped(lambda record: {'id':record.id ,'name': record.name})
         return { 'classfications':classfication,'governments':governs,'reportingway':reportingway,'responsapleparty':responsapleparty}
         
@@ -77,7 +77,7 @@ class WebsiteHelpdesk_portal(http.Controller):
         #issues = request.env['complain.issue'].search([])
         #drinking_watters = request.env['drinking.water'].search([])
         
-        introducers=request.env['res.partner'].search([('responsables','=',int(kwargs['id']))])
+        introducers=request.env['res.partner'].sudo().search([('responsables','=',int(kwargs['id']))])
         
         introducer=introducers.mapped(lambda record: {'id':record.id ,'name': record.name})
         return { 'types':introducer,}    
