@@ -23,8 +23,9 @@ from odoo import http
 from odoo.http import request
 
 class WebsiteHelpdesk_portal(http.Controller):
-
-    @http.route('''/ewra-helpdesk-data''', type='json', auth="user", website=True,
+    #@http.route('''/ewra-helpdesk-data''', type='json', auth="user", website=True,
+      #          sitemap=True)
+    @http.route('''/ewra-helpdesk-data''', type='json', auth="none", website=True,
                 sitemap=True)
     def website_helpdesk_view(self, **kwargs):
         #partners = request.env['res.partner'].search([('is_complaint','=',True)])
@@ -48,7 +49,9 @@ class WebsiteHelpdesk_portal(http.Controller):
                                 #'types': drinking_watters,
                               }
                               )
-    @http.route('''/ewra-complain_changereason''', type='json', auth="user", website=True,
+    # @http.route('''/ewra-complain_changereason''', type='json', auth="user", website=True,
+    #             sitemap=True)
+    @http.route('''/ewra-complain_changereason''', type='json', auth="none", website=True,
                 sitemap=True)
     def website_helpdesk_change_reason(self, **kwargs):
         #partners = request.env['res.partner'].search([('is_complaint','=',True)])
