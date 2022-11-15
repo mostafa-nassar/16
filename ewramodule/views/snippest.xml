@@ -93,7 +93,7 @@
                                                         <label class="col-md-12 col-form-label" for="partner_id">
                                                             <span class="label_right">
                                                                 قسم/ قرية/ مركز
-                                                                <span style="color:red">*</span>
+                                                                <!-- <span style="color:red">*</span> -->
                                                             </span>
                                                             <div class="input-group">
                                                                 <input  name="city" id="city" type="text" class="form-control" />
