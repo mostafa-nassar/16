@@ -101,6 +101,7 @@ publicWidget.registry.complainInit= publicWidget.Widget.extend({
                 params: {'id':$('.complain_class').val()},
             }).then(function (result) {
                var types=result['types'];
+               $("#complain_type").empty();
                 $("#complain_type").append("<option value=''>أختر واحد </option>");
                 for(let i=0;i<types.length;i++){
                     $("#complain_type").append("<option value='"+types[i].id+"'>"+types[i].name+"</option>");
@@ -117,6 +118,7 @@ publicWidget.registry.complainInit= publicWidget.Widget.extend({
                 params: {'id':$('#responsable').val()},
             }).then(function (result) {
                var types=result['types'];
+               $("#introducer").empty();
                 $("#introducer").append("<option value=''>أختر واحد </option>");
                 for(let i=0;i<types.length;i++){
                     $("#introducer").append("<option value='"+types[i].id+"'>"+types[i].name+"</option>");
