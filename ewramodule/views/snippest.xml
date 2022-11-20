@@ -321,10 +321,12 @@
                                                             <label class="col-md-12 col-form-label" for="partner_id">
                                                                 <span class="label_right">
                                                                     كود الشكوى
-                                                                    <span style="color:red">*</span>
+<!--                                                                    <span style="color:red">*</span>-->
                                                                 </span>
                                                                 <div class="input-group">
-                                                                    <input required="1" id="reporting_id" name="reporting_id" type="text" class="form-control" />
+<!--                                                                    <input required="1" id="reporting_id" name="reporting_id" type="text" class="form-control" />-->
+                                                                    <input id="reporting_id" name="reporting_id" type="text" class="form-control" />
+
                                                                 </div>
 
                                                             </label>
@@ -339,10 +341,11 @@
                                                             <label class="col-md-12 col-form-label" for="partner_id">
                                                                 <span class="label_right">
                                                                     تاريخ الإبلاغ
-                                                                    <span style="color:red">*</span>
+<!--                                                                    <span style="color:red">*</span>-->
                                                                 </span>
                                                                 <div class="input-group">
-                                                                    <input required="1" id="reportdate" name="reportdate"  class="form-control" type="date"/>
+<!--                                                                    <input required="1" id="reportdate" name="reportdate"  class="form-control" type="date"/>-->
+                                                                    <input id="reportdate" name="reportdate"  class="form-control" type="date"/>
                                                                 </div>
 
                                                             </label>
@@ -354,10 +357,11 @@
                                                             <label class="col-md-12 col-form-label" for="partner_id">
                                                                 <span class="label_right">
                                                                     تاريخ رد الشركة
-                                                                    <span style="color:red">*</span>
+<!--                                                                    <span style="color:red">*</span>-->
                                                                 </span>
                                                                 <div class="input-group">
-                                                                    <input required="1" id="replay_date" name="replay_date" type="date" class="form-control" />
+<!--                                                                    <input required="1" id="replay_date" name="replay_date" type="date" class="form-control" />-->
+                                                                    <input id="replay_date" name="replay_date" type="date" class="form-control" />
                                                                 </div>
 
                                                             </label>
@@ -370,10 +374,11 @@
                                                             <label class="col-md-12 col-form-label" for="partner_id">
                                                                 <span class="label_right">
                                                                     رد مقدم الخدمة
-                                                                    <span style="color:red">*</span>
+<!--                                                                    <span style="color:red">*</span>-->
                                                                 </span>
                                                                 <div class="input-group">
-                                                                    <input required="1" id="replay" name="replay" type="text" class="form-control" />
+<!--                                                                    <input required="1" id="replay" name="replay" type="text" class="form-control" />-->
+                                                                    <input id="replay" name="replay" type="text" class="form-control" />
                                                                 </div>
 
                                                             </label>
