@@ -36,6 +36,7 @@ import publicWidget from 'web.public.widget';
 publicWidget.registry.complainInit= publicWidget.Widget.extend({
     selector: '.complainform',
     start() {
+        
             var self = this;
             this._rpc({
                 route: '/ewra-helpdesk-data',
@@ -91,6 +92,8 @@ publicWidget.registry.complainInit= publicWidget.Widget.extend({
             'change .complain_class':'changecomplainclass',
             'change #responsable':'responsablechange',
             'submit #complainform':'SubmitHelpDeskForm',
+            'change #checkpreviouscomplains':'previousComplains',
+            'change #complain_type':'checkcomplain_type',
             
         },
         changecomplainclass:function(event){
@@ -104,7 +107,7 @@ publicWidget.registry.complainInit= publicWidget.Widget.extend({
                $("#complain_type").empty();
                 $("#complain_type").append("<option value=''>أختر واحد </option>");
                 for(let i=0;i<types.length;i++){
-                    $("#complain_type").append("<option value='"+types[i].id+"'>"+types[i].name+"</option>");
+                    $("#complain_type").append("<option value='"+types[i].id+"' relsub='"+types[i].needsubscription+"'>"+types[i].name+"</option>");
                 }
             });
             
@@ -171,7 +174,31 @@ publicWidget.registry.complainInit= publicWidget.Widget.extend({
         });
     
     return  false;
-        }
-    
+        },
+
+        previousComplains:function(e){
+           
+            if($("#checkpreviouscomplains").prop('checked')){
+
+                $("#divcheckpreviouscomplains").show();
+            }else{
+                $("#divcheckpreviouscomplains").hide();
+            }
+            // if($("#divcheckpreviouscomplains").is(":visible")){
+                
+            //     $("#divcheckpreviouscomplains").hide();
+            // }else{
+            //     $("#divcheckpreviouscomplains").show();
+            // }
+           
+           
+        },
+        checkcomplain_type:function(e){
+            if($("#complain_type").find('option:selected').attr('relsub')){
+                $(".needsubscription").show()
+            }else{
+                $(".needsubscription").hide()
+            }
+        },
 
 });

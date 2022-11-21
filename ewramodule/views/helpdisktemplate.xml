@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+  <template id="ewra_ticketdescription" name="ewra_ticketdescription"  inherit_id="helpdesk.tickets_followup">
+        <xpath expr="//div[@name='description']" position="before">
+            <div class="row mb-4">
+                <strong class="col-lg-2">Complainer Name</strong>
+                <span class="col-lg-10" t-field="ticket.complainername"/>
+            </div>
+        </xpath>
+       </template>
+
+    </data>
+    </odoo>
+    
+     
+<!-- <template  xml:space="preserve">
+    <t t-name="helpdesk.tickets_followup_ewra" t-extend="helpdesk.tickets_followup">
+        <t t-jquery="div.description" t-operation="before">
+            <div class="row mb-4">
+                <strong class="col-lg-2">Description inserted</strong>
+            </div>
+        </t>
+    </t>
+</template> -->
+   

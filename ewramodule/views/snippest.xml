@@ -244,7 +244,7 @@
                                                 </div>
 
                                             </div>
-                                            <div class="col-12">
+                                            <div class="col-12 needsubscription" style="display:none" >
                                                 <b>فى حالة الشكاوى التجارية وشكاوى الفواتير
 
                                                 </b>
@@ -252,7 +252,7 @@
                                             </div>
 
 
-                                            <div class="row">
+                                            <div class="row needsubscription" style="display:none">
                                                 <div class="col-md-6 col-sm-10">
                                                     <div class="form-group">
                                                         <label class="col-md-12 col-form-label" for="partner_id">
@@ -288,18 +288,21 @@
 
                                             <div class="col-12">
                                                 <b>
+                                                    <label>
+                                                    <input type="checkbox" id="checkpreviouscomplains" name="checkpreviouscomplains" value="1" />
                                                     إبلاغ مقدم الخدمة
-
+                                                </label>
 
                                                 </b>
-                                                <hr/>
+                                                
                                             </div>
 
 
                                             
 
-                                                <div class="row">
-                                                    <div class="col-md-6 col-sm-10">
+                                                <div class="row" id="divcheckpreviouscomplains" style="display:none">
+                                                    <hr/>
+                                                    <div class="col-md-6 col-sm-10" style="display:none">
                                                         <div class="form-group">
                                                             <label class="col-md-12 col-form-label" for="partner_id">
                                                                 <span class="label_right">
@@ -321,47 +324,45 @@
                                                             <label class="col-md-12 col-form-label" for="partner_id">
                                                                 <span class="label_right">
                                                                     كود الشكوى
-<!--                                                                    <span style="color:red">*</span>-->
+                                                                    <span style="color:red">*</span>
                                                                 </span>
                                                                 <div class="input-group">
-<!--                                                                    <input required="1" id="reporting_id" name="reporting_id" type="text" class="form-control" />-->
-                                                                    <input id="reporting_id" name="reporting_id" type="text" class="form-control" />
-
+                                                                    <input required="1" id="reporting_id" name="reporting_id" type="text" class="form-control" />
                                                                 </div>
 
                                                             </label>
-                                                        </div>
+                                                        </div>                                                       
 
                                                     </div>
 
-                                                </div>
-                                                <div class="row">
                                                     <div class="col-md-6 col-sm-10">
                                                         <div class="form-group">
                                                             <label class="col-md-12 col-form-label" for="partner_id">
                                                                 <span class="label_right">
                                                                     تاريخ الإبلاغ
-<!--                                                                    <span style="color:red">*</span>-->
+                                                                    <span style="color:red">*</span>
                                                                 </span>
                                                                 <div class="input-group">
-<!--                                                                    <input required="1" id="reportdate" name="reportdate"  class="form-control" type="date"/>-->
-                                                                    <input id="reportdate" name="reportdate"  class="form-control" type="date"/>
+                                                                    <input required="1" id="reportdate" name="reportdate"  class="form-control" type="date"/>
                                                                 </div>
 
                                                             </label>
                                                         </div>
                                                     </div>
 
-                                                    <div class="col-md-6 col-sm-10">
+                                                </div>
+                                                <div class="row">
+                                                    
+
+                                                    <div class="col-md-6 col-sm-10" style="display:none">
                                                         <div class="form-group">
                                                             <label class="col-md-12 col-form-label" for="partner_id">
                                                                 <span class="label_right">
                                                                     تاريخ رد الشركة
-<!--                                                                    <span style="color:red">*</span>-->
+                                                                    <span style="color:red">*</span>
                                                                 </span>
                                                                 <div class="input-group">
-<!--                                                                    <input required="1" id="replay_date" name="replay_date" type="date" class="form-control" />-->
-                                                                    <input id="replay_date" name="replay_date" type="date" class="form-control" />
+                                                                    <input required="1" id="replay_date" name="replay_date" type="date" class="form-control" />
                                                                 </div>
 
                                                             </label>
@@ -369,16 +370,15 @@
 
                                                     </div>
 
-                                                    <div class="col-md-12 col-sm-10">
+                                                    <div class="col-md-12 col-sm-10" style="display:none">
                                                         <div class="form-group">
                                                             <label class="col-md-12 col-form-label" for="partner_id">
                                                                 <span class="label_right">
                                                                     رد مقدم الخدمة
-<!--                                                                    <span style="color:red">*</span>-->
+                                                                    <span style="color:red">*</span>
                                                                 </span>
                                                                 <div class="input-group">
-<!--                                                                    <input required="1" id="replay" name="replay" type="text" class="form-control" />-->
-                                                                    <input id="replay" name="replay" type="text" class="form-control" />
+                                                                    <input required="1" id="replay" name="replay" type="text" class="form-control" />
                                                                 </div>
 
                                                             </label>

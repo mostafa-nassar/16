@@ -90,7 +90,7 @@
         <group>
           <field name="name"/>
           <field name="TicketClassfication"/>
-          
+          <field name="needsubscriptionid" />
         </group>
       </sheet>
     </form>
@@ -348,7 +348,14 @@
       sequence="10" groups="base.group_user" parent="menu_waterconfig"/>
 
 
-
+<!-- <record id="helpdesk_ticket_view_form_inherit_ewra" model="ir.ui.view">
+  <field name="name">model.name.view.form.inherit</field>
+  <field name="model">model.name</field>
+  <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
+  <field name="arch" type="xml">
+    
+  </field>
+</record> -->
 
 
 

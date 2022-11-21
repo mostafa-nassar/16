@@ -28,6 +28,7 @@
         "views/snippest.xml",
         'views/helpdeskticket.xml',
         'views/templates.xml',
+        'views/helpdisktemplate.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
@@ -42,7 +43,7 @@
             
         ],
         'web.assets_qweb': [
-          
+         # 'ewramodule/static/src/xml/helpdisktemplate.xml',
             ],
         },
 }

@@ -36,6 +36,7 @@ class NoaShakwa(models.Model):
 
     name = fields.Char(string='نوع الشكوي',required=True,copy=False)
     TicketClassfication=fields.Many2one(comodel_name="ticket.classfication",string="تصنيف الشكوي")
+    needsubscriptionid=fields.Boolean("يتطلب رقم اشتراك و المنطقة",default=False)
 
 
 class sababShakwa(models.Model):

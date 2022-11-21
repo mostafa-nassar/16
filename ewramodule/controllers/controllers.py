@@ -60,7 +60,7 @@ class WebsiteHelpdesk_portal(http.Controller):
         
         clasifications=request.env['ticket.type'].search([('TicketClassfication','=',int(kwargs['id']))])
         
-        classfication=clasifications.mapped(lambda record: {'id':record.id ,'name': record.name})
+        classfication=clasifications.mapped(lambda record: {'id':record.id ,'name': record.name,'needsubscription':record.needsubscriptionid})
         return { 'types':classfication,}
         return request.render("ewratheme.ewra_complaint_form"
                               , {
