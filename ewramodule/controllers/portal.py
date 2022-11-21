@@ -61,6 +61,8 @@ class CustomerPortalInhert(portal.CustomerPortal):
             'content': {'input': 'content', 'label': Markup(_('Search <span class="nolabel"> (in Content)</span>'))},
             'message': {'input': 'message', 'label': _('Search in Messages')},
             'customer': {'input': 'customer', 'label': _('Search in Customer')},
+            'national_id': {'input': 'national_id', 'label': _('الرقم القومي')},
+            'complaincode': {'input': 'complaincode', 'label': _('رقم الشكوي')},
             'id': {'input': 'id', 'label': _('Search in Reference')},
             'status': {'input': 'status', 'label': _('Search in Stage')},
             'all': {'input': 'all', 'label': _('Search in All')},
@@ -115,6 +117,10 @@ class CustomerPortalInhert(portal.CustomerPortal):
                 search_domain = OR([search_domain, ['|', ('name', 'ilike', search), ('description', 'ilike', search)]])
             if search_in in ('customer', 'all'):
                 search_domain = OR([search_domain, [('partner_id', 'ilike', search)]])
+            if search_in in ('national_id', 'all'):
+                search_domain = OR([search_domain, [('national_id', 'ilike', search)]])
+            if search_in in ('complaincode', 'all'):
+                search_domain = OR([search_domain, [('complaincode', 'ilike', search)]])        
             if search_in in ('message', 'all'):
                 discussion_subtype_id = request.env.ref('mail.mt_comment').id
                 search_domain = OR([search_domain, [('message_ids.body', 'ilike', search), ('message_ids.subtype_id', '=', discussion_subtype_id)]])
