@@ -102,7 +102,7 @@ class WebsiteHelpdesk_portal(http.Controller):
             'areanumber':vals['areanumber'] if 'areanumber' in vals else False,
             'reportingway':vals['reportingway'] if 'reportingway' in vals else False,
             'reportingcode':vals['reportingcode'] if 'reportingcode' in vals else False,
-            'complaindate':vals['complaindate'] if 'complaindate' in vals else '',
+            'complaindate':vals['complaindate'] if 'complaindate' in vals else 'NULL',
             'complainresponsedate':vals['complainresponsedate'] if 'complainresponsedate' in vals else False,
             'providerresponse':vals['providerresponse'] if 'providerresponse' in vals else False,
             'description':vals['description'] if 'description' in vals else False,
