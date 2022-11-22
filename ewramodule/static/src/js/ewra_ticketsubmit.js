@@ -140,7 +140,7 @@ publicWidget.registry.complainInit= publicWidget.Widget.extend({
             complaindate=$(".complainform #reportdate").val();
          }
          else{
-            complaindate='NULL';
+            complaindate=null;
          }
          this._rpc({
             // model: 'helpdesk.ticket',
