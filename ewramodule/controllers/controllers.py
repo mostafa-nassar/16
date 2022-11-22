@@ -19,6 +19,7 @@
 #         return http.request.render('ewramodule.object', {
 #             'object': obj
 #         })
+import datetime
 from odoo import http
 from odoo.http import request
 
@@ -101,7 +102,7 @@ class WebsiteHelpdesk_portal(http.Controller):
             'areanumber':vals['areanumber'] if 'areanumber' in vals else False,
             'reportingway':vals['reportingway'] if 'reportingway' in vals else False,
             'reportingcode':vals['reportingcode'] if 'reportingcode' in vals else False,
-            'complaindate':vals['complaindate'] if 'complaindate' in vals else False,
+            'complaindate':vals['complaindate'] if 'complaindate' in vals else '',
             'complainresponsedate':vals['complainresponsedate'] if 'complainresponsedate' in vals else False,
             'providerresponse':vals['providerresponse'] if 'providerresponse' in vals else False,
             'description':vals['description'] if 'description' in vals else False,
@@ -141,3 +142,14 @@ class WebsiteHelpdesk_portal(http.Controller):
               
             """
             }
+     
+     
+    @http.route('''/ewracomplainresponse''', type='json', auth="user", website=True,
+                sitemap=True)
+    def getportalresponse(self,**vals):
+        ticket=request.env['helpdesk.ticket'].sudo().search([('id','=',vals['ticketid'])])
+        try:    
+            ticket.write({'providerresponse':vals['response'],'complainresponsedate':datetime.date.today()})  
+            return {'res':True}
+        except:
+            return {'res':False }  

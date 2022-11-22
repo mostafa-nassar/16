@@ -261,7 +261,7 @@
                                                                 <span style="color:red">*</span>
                                                             </span>
                                                             <div class="input-group">
-                                                                <input required="1" id="Subscription_id" name="Subscription_id" type="text" class="form-control" />
+                                                                <input  id="Subscription_id" name="Subscription_id" type="text" class="form-control" />
                                                             </div>
 
                                                         </label>
@@ -276,7 +276,7 @@
                                                                 <span style="color:red">*</span>
                                                             </span>
                                                             <div class="input-group">
-                                                                <input required="1" id="origin_num" name="origin_num" type="text" class="form-control" />
+                                                                <input  id="origin_num" name="origin_num" type="text" class="form-control" />
                                                             </div>
 
                                                         </label>
@@ -310,7 +310,7 @@
                                                                     <span style="color:red">*</span>
                                                                 </span>
                                                                 <div class="input-group">
-                                                                    <select required="1" name="reportingway" id="reportingway" class="form-control">
+                                                                    <select  name="reportingway" id="reportingway" class="form-control">
                                                                         
                                                                     </select>
                                                                 </div>
@@ -327,7 +327,7 @@
                                                                     <span style="color:red">*</span>
                                                                 </span>
                                                                 <div class="input-group">
-                                                                    <input required="1" id="reporting_id" name="reporting_id" type="text" class="form-control" />
+                                                                    <input  id="reporting_id" name="reporting_id" type="text" class="form-control" />
                                                                 </div>
 
                                                             </label>
@@ -343,7 +343,7 @@
                                                                     <span style="color:red">*</span>
                                                                 </span>
                                                                 <div class="input-group">
-                                                                    <input required="1" id="reportdate" name="reportdate"  class="form-control" type="date"/>
+                                                                    <input  id="reportdate" name="reportdate"  class="form-control" type="date"/>
                                                                 </div>
 
                                                             </label>
@@ -362,7 +362,7 @@
                                                                     <span style="color:red">*</span>
                                                                 </span>
                                                                 <div class="input-group">
-                                                                    <input required="1" id="replay_date" name="replay_date" type="date" class="form-control" />
+                                                                    <input  id="replay_date" name="replay_date" type="date" class="form-control" />
                                                                 </div>
 
                                                             </label>
@@ -378,7 +378,7 @@
                                                                     <span style="color:red">*</span>
                                                                 </span>
                                                                 <div class="input-group">
-                                                                    <input required="1" id="replay" name="replay" type="text" class="form-control" />
+                                                                    <input  id="replay" name="replay" type="text" class="form-control" />
                                                                 </div>
 
                                                             </label>

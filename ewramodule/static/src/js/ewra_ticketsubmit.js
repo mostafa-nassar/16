@@ -135,6 +135,13 @@ publicWidget.registry.complainInit= publicWidget.Widget.extend({
             e.preventDefault();
             e.stopPropagation();
          var self=this;
+         let complaindate='';
+         if($(".complainform #reportdate").val()!=""){
+            complaindate=$(".complainform #reportdate").val();
+         }
+         else{
+            complaindate='null';
+         }
          this._rpc({
             // model: 'helpdesk.ticket',
             // method: 'create_help_ticket_portal',
@@ -156,7 +163,7 @@ publicWidget.registry.complainInit= publicWidget.Widget.extend({
                 'areanumber':$(".complainform #origin_num").val(),
                 'reportingway':$(".complainform #reportingway").find(":selected").val(),
                 'reportingcode':$(".complainform #reporting_id").val(),
-                'complaindate':$(".complainform #reportdate").val(),
+                'complaindate':complaindate,
                 'complainresponsedate':$(".complainform #replay_date").val(),
                 'providerresponse':$(".complainform #replay").val(),
                 'description':$(".complainform #details").val()
@@ -181,8 +188,14 @@ publicWidget.registry.complainInit= publicWidget.Widget.extend({
             if($("#checkpreviouscomplains").prop('checked')){
 
                 $("#divcheckpreviouscomplains").show();
+                $('#reporting_id').prop('required', true);
+                $('#reportdate').prop('required', true);
+              
             }else{
                 $("#divcheckpreviouscomplains").hide();
+                $('#reporting_id').prop('required', true);
+                $('#reportdate').prop('required', true);
+                
             }
             // if($("#divcheckpreviouscomplains").is(":visible")){
                 
@@ -194,11 +207,59 @@ publicWidget.registry.complainInit= publicWidget.Widget.extend({
            
         },
         checkcomplain_type:function(e){
-            if($("#complain_type").find('option:selected').attr('relsub')){
-                $(".needsubscription").show()
+            if($("#complain_type").find('option:selected').attr('relsub')=='true'){
+                $(".needsubscription").show();
+                $('#Subscription_id').prop('required', true);
+                $('#origin_num').prop('required', true);
             }else{
-                $(".needsubscription").hide()
+                $(".needsubscription").hide();
+                $('#Subscription_id').prop('required', false);
+                $('#origin_num').prop('required', false);
             }
         },
+
+});
+
+
+publicWidget.registry.complainresponseInit= publicWidget.Widget.extend({
+    selector: '.ewraportalresponseclass',
+    start() {
+        var self=this;
+        console.log("");
+
+    },
+    events: { 
+        
+        'submit #ewraportalresponse':'SubmitHelpDeskResponseForm',
+ 
+        
+    },
+    SubmitHelpDeskResponseForm:function(e){
+        e.preventDefault();
+            e.stopPropagation();
+            this._rpc({              
+            
+                route : '/ewracomplainresponse',
+                params : {
+                    'response':$("#response").val(),
+                    'ticketid':$("#tecketsendid").val()
+                }
+            }).then(function(res){
+                if (res.errors) {
+                    toastr.error('Something went wrong ' + res.errors + ' , try again.')
+                    return Promise.reject(res);
+                } else {
+                    if(res['res']){
+                        location.reload(); 
+                    }else{
+                        alert("Error Occured");
+                    }
+                    //$(".complainform").html(response['code']).fadeIn(500);
+                }
+            });
+
+            
+        return false;
+    },
 
 });
