@@ -17,7 +17,7 @@ class CustomerPortalInhert(portal.CustomerPortal):
         user=request.env['res.users'].search([('id','=',account)])
         if user.parent_id:
             parent=user.parent_id
-            usertype=parent.partner_id.companytype
+            usertype=parent.companytype
         else:
             usertype=user.partner_id.companytype
                 
