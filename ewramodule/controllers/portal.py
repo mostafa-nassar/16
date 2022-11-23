@@ -18,15 +18,17 @@ class CustomerPortalInhert(portal.CustomerPortal):
         if user.parent_id:
             parent=user.parent_id
             usertype=parent.companytype
+            userid=parent.id
         else:
             usertype=user.partner_id.companytype
+            userid=user.partner_id.id
                 
         
         if usertype:
             if usertype=='responsable':
-                domains=[('responsableparty','=',user.partner_id.id)]
+                domains=[('responsableparty','=',userid)]
             else:
-                domains=[('serviceprovider','=',user.partner_id.id)]
+                domains=[('serviceprovider','=',userid)]
         else:
             domains=[]        
         return domains

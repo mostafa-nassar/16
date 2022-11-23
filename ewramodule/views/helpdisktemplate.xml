@@ -130,7 +130,7 @@
 
         </xpath>
         <xpath expr="//div[@name='description']" position="after">
-            <span t-if="ticket.providerresponse==''" class="ewraportalresponseclass">
+            <span t-if="ticket.providerresponse==''  class="ewraportalresponseclass">
             <form id="ewraportalresponse" name="ewraportalresponse" >
                 <div class="form-group">
                     <label for="response">رد مقدم الخدمة</label>
