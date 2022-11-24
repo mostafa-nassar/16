@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+
+
+    <record id="collection_table_form" model="ir.ui.view">
+<field name="name">collection_table_form</field>
+<field name="model">collection.table</field>
+<field name="arch" type="xml">
+    <form>
+            <sheet>
+        <group>
+<h1>جداول مدخلات نسب التحصيل </h1>
+                            <br/>
+                <br/>
+                <br/>  <br/>
+                <br/>
+                <br/>
+
+                    <group>
+                        <group>
+                            <field name="componyName"/>
+                        </group>
+                        <group>
+                            <field name="fiscalyear"/>
+                        </group>
+                    </group>
+
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+
+            <group>
+
+                    <field name="componyName" />
+
+
+            </group>
+
+
+
+
+
+
+
+
+
+
+
+        </group>
+   </sheet> </form>
+
+</field>
+</record>
+
+
+
+
+
+    <record id="collection_table_form" model="ir.ui.view">
+        <field name="name">collection_table</field>
+        <field name="model">collection.table</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+
+            </tree>
+        </field>
+    </record>
+
+
+
+
+
+
+
+</odoo>

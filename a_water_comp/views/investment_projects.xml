@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <record model="ir.ui.view" id="view_parentinv_form">
+        <field name="name">parent.model.form</field>
+        <field name="model">investment.projects</field>
+        <field name="arch" type="xml">
+            <form>
+<h2> المشروعات الإستثمارية _ الإنشاءات الجديدة والتوسعات التى دخلت الخدمة خلال العام</h2>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+                <h3>مياه الشرب </h3>
+                <br/>
+                <br/>
+                <br/>
+                            <field name="child_field_ids">
+
+
+                                <tree editable="battom">
+                                    <field name="child_field_1" />
+                                    <field name="child_field_2"/>
+                                    <field name="child_field_3"/>
+                                    <field name="child_field_4"/>
+                                    <field name="child_field_5" />
+                                    <field name="child_field_7" />
+                                    <field name="child_field_9" />
+                                    <field name="child_field_6" />
+                                    <field name="child_field_8" />
+
+                                </tree>
+
+                                <form>
+                                    <group>
+                                     <field name="child_field_1" />
+                                    <field name="child_field_2"/>
+                                    <field name="child_field_3"/>
+                                    <field name="child_field_4"/>
+                                    <field name="child_field_5" />
+                                    <field name="child_field_7" />
+                                    <field name="child_field_9" />
+                                    <field name="child_field_6" />
+                                    <field name="child_field_8" />
+                                    </group>
+                                </form>
+
+
+
+
+                            </field>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+    <h3> صرف صحى  </h3>
+                <br/>
+                <br/>
+                <br/>
+                            <field name="child_field_ids2">
+
+
+                                <tree editable="battom">
+                                    <field name="child_field_11" />
+                                    <field name="child_field_22"/>
+                                    <field name="child_field_33"/>
+                                    <field name="child_field_44"/>
+                                    <field name="child_field_55" />
+                                    <field name="child_field_77" />
+                                    <field name="child_field_99" />
+                                    <field name="child_field_66" />
+                                    <field name="child_field_88" />
+
+                                </tree>
+
+                                <form>
+                                    <group>
+                                        <field name="child_field_11" />
+                                    <field name="child_field_22"/>
+                                    <field name="child_field_33"/>
+                                    <field name="child_field_44"/>
+                                    <field name="child_field_55" />
+                                    <field name="child_field_77" />
+                                    <field name="child_field_99" />
+                                    <field name="child_field_66" />
+                                    <field name="child_field_88" />
+                                    </group>
+                                </form>
+
+
+
+
+                            </field>
+
+
+            </form>
+        </field>
+    </record>
+
+
+
+
+
+      <record model="ir.ui.view" id="view_parentinv_tree">
+        <field name="name">parent.model.tree</field>
+        <field name="model">investment.projects</field>
+        <field name="arch" type="xml">
+            <tree>
+            </tree>
+        </field>
+      </record>
+
+
+</odoo>

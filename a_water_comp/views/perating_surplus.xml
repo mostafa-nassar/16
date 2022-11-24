@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"    ?>
+
+<odoo>
+
+
+
+    <record id="pret_form" model="ir.ui.view">
+<field name="name">الفائض/ العجز التشغيلي</field>
+<field name="model">operating.surplus</field>
+<field name="arch" type="xml">
+    <form>
+            <sheet>
+
+      <h1>جداول: مدخلات الايرادات والتكاليف </h1>
+
+                <br/>
+                <br/>
+                <br/>  <br/>
+                <br/>
+                <br/>
+
+                    <group>
+                        <group>
+                            <field name="componyName"/>
+                        </group>
+                        <group>
+                            <field name="fiscalyear"/>
+                        </group>
+                    </group>
+
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                <notebook>
+                    <page col="2" string="1- نشاط مياه الشرب">
+                        <group>
+                            <br/>
+
+ <h4> مدخلات الايرادات والتكاليف (نشاط مياه الشرب)</h4>
+                              <br/>
+                              <br/>
+                              <br/>
+                        <group>
+                           <h4>البيان</h4>
+                            <br/>
+                            <br/>
+                            <field name="watersals" />
+                            <br/>   <field name="servtime" />
+                            <br/>   <field name="itemsforsale" />
+                            <br/>   <field name="other" />
+                            <br/>   <field name="totalSal" />
+                            <br/><field name="subl" />
+                            <br/><field name="taxesS" />
+                            <br/><field name="prevtaxesS" />
+                            <br/><field name="doneappoi" />
+                            <br/><field name="unusi" />
+                            <br/><field name="otherusi" />
+                            <br/><field name="totalusi" />
+                            <br/>
+                        </group>
+
+                        <group>
+                            <h4>البيان</h4>
+                              <br/>
+                            <br/>
+                            <field name="workers" />
+                            <br/>   <field name="oils" />
+                            <br/>   <field name="electr" />
+                            <br/>   <field name="messsions" />
+                            <br/>   <field name="droped" />
+                            <br/>   <field name="comm" />
+                            <br/>   <field name="othersWO" />
+                            <br/>   <field name="totalwork" />
+                            <br/>
+                        </group>
+
+                        <group>
+                            <br/><br/><br/><br/>
+                            <h2>المشتريات بغرض البيع</h2>
+                              <br/>
+                            <br/>
+                            <field name="WoterForSale" />
+                            <br/>   <field name="itemsforsale" />
+                            <br/>   <field name="totalItems" />
+                            <br/>
+                        </group>
+
+                        <group>  <br/><br/><br/><br/>
+                            <h2>الاعباء والخسائر</h2>
+                              <br/>
+                            <br/>
+                            <field name="Fordrpo" />
+                            <br/>   <field name="unugualloses" />
+                            <br/>   <field name="prevyears" />
+                            <br/>   <field name="othersloses" />
+                            <br/>   <field name="totlalos" />
+                            <br/>   <field name="totlalspend" />
+                            <br/>
+                        </group>
+
+
+
+</group>
+
+</page>
+
+
+         <page col="2" string="2- نشاط الصرف الصحي">
+                        <group>
+                            <br/>
+
+ <h4> جداول: مدخلات الايرادات والتكاليف (نشاط الصرف الصحي)</h4>
+                              <br/>
+                              <br/>
+                              <br/>
+                        <group>
+                           <h4>البيان</h4>
+                            <br/>
+                            <br/>
+                            <field name="souasals" />
+                            <br/>   <field name="servtimesoua" />
+                            <br/>   <field name="itemsforsalesua" />
+                            <br/>   <field name="othersoua" />
+                            <br/>   <field name="totalSalsoa" />
+                            <br/><field name="sublsoua" />
+                            <br/><field name="taxesSsou" />
+                            <br/><field name="prevtaxesSsoua" />
+                            <br/><field name="doneappoisoua" />
+                            <br/><field name="unusisou" />
+                            <br/><field name="otherusisou" />
+                            <br/><field name="totalusisou" />
+                            <br/>
+                        </group>
+
+                        <group>
+                            <h4>البيان</h4>
+                              <br/>
+                            <br/>
+                            <field name="workerssoua" />
+                            <br/>   <field name="oilssou" />
+                            <br/>   <field name="electrsoua" />
+                            <br/>   <field name="messsionssoua" />
+                            <br/>   <field name="dropedsoua" />
+                            <br/>   <field name="commsoua" />
+                            <br/>   <field name="othersWOsoua" />
+                            <br/>   <field name="totalworksoua" />
+                            <br/>
+                        </group>
+
+                        <group>
+                            <br/><br/><br/><br/>
+                            <h2>المشتريات بغرض البيع</h2>
+                              <br/>
+                            <br/>
+                           <field name="itemsforsalesoau" />
+                            <br/>   <field name="totalItemssoua" />
+                            <br/>
+                        </group>
+
+                        <group>  <br/><br/><br/><br/>
+                            <h2>الاعباء والخسائر</h2>
+                              <br/>
+                            <br/>
+                            <field name="Fordrposoua" />
+                            <br/>   <field name="unuguallosessoua" />
+                            <br/>   <field name="prevyearssoua" />
+                            <br/>   <field name="otherslosessoua" />
+                            <br/>   <field name="totlalossoa" />
+                            <br/>   <field name="totlalspendsoua" />
+                            <br/>
+                        </group>
+
+
+
+</group>
+
+</page>
+
+
+
+
+                </notebook>
+
+
+   </sheet> </form>
+
+</field>
+</record>
+
+
+
+
+
+    <record id="pre_tree" model="ir.ui.view">
+        <field name="name">الفائض/ العجز التشغيلي</field>
+        <field name="model">operating.surplus</field>
+        <field name="arch" type="xml">
+            <tree>
+
+            </tree>
+        </field>
+    </record>
+
+
+
+
+
+
+
+
+
+
+
+</odoo>

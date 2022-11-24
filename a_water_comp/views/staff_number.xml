@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+
+
+    <record id="staff_number_form" model="ir.ui.view">
+<field name="name">عدد العاملين</field>
+<field name="model">staff.number</field>
+<field name="arch" type="xml">
+    <form>
+            <sheet>
+<h1>عدد العاملين</h1>
+
+                <br/>
+                <br/>
+                <br/>  <br/>
+                <br/>
+                <br/>
+
+                    <group>
+                        <group>
+                            <field name="componyName"/>
+                        </group>
+                        <group>
+                            <field name="fiscalyear"/>
+                        </group>
+                    </group>
+
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+
+
+        <group col="2">
+
+
+        <gorup>
+            <group>
+            <h2> مياه الشرب</h2>
+            <br/>
+            <br/>
+            <br/>  <br/><br/>
+            <br/>
+            <field name="stafperfixst"/><br/>
+            <field name="stafpermotst"/><br/>
+            <field name="stafpererzst"/><br/>
+            <field name="stafpernetsst"/>
+            <br/><br/><br/><br/>
+            <h2>الصرف الصحى</h2>
+            <br/>
+            <br/>   <br/>
+            <br/>   <br/>
+            <br/>
+            <field name="staffperproc"/><br/>
+            <field name="staffpernets"/><br/>
+             <br/><br/><br/><br/>
+             <br/><br/><br/><br/>
+</group>
+            <group>
+            <h2>الديوان العام</h2>
+            <br/>
+            <br/>
+            <br/>
+         <field name="staffperglo"/><br/><br/>
+            <field name="total"/></group>
+
+        </gorup>
+
+            <group>
+                <h2>عدد العاملين وفقاً للتخصصات</h2>
+                  <br/>
+                  <br/>
+                     <br/>    <br/>
+                  <br/>
+                     <br/>
+             <field name="staffscin"/><br/>
+            <field name="staffcomm"/><br/>
+            <field name="stafftech"/><br/>
+            <field name="staffothers"/><br/>
+         <field name="total2"/>
+
+            </group>
+
+
+
+
+
+
+
+
+        </group>
+   </sheet> </form>
+
+</field>
+</record>
+
+
+
+
+
+    <record id="staff_form" model="ir.ui.view">
+        <field name="name">staff_number.tree</field>
+        <field name="model">staff.number</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="fiscalyear" />
+                <field name="componyName" />
+
+            </tree>
+        </field>
+    </record>
+
+
+
+
+
+
+
+</odoo>

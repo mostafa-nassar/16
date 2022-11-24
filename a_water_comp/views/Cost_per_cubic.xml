@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"    ?>
+
+<odoo>
+
+
+
+    <record id="costpercubic_form" model="ir.ui.view">
+<field name="name">تكلفة المتر المكعب من المياه المنتجة</field>
+<field name="model">costpercubic.mod</field>
+<field name="arch" type="xml">
+    <form>
+            <sheet>
+    <h1> جدول- تكلفة المتر المكعب من المياه المنتجة</h1>
+
+                <br/>
+                <br/>
+                <br/>  <br/>
+                <br/>
+                <br/>
+
+                    <group>
+                        <group>
+                            <field name="componyName"/>
+                        </group>
+                        <group>
+                            <field name="fiscalyear"/>
+                        </group>
+                    </group>
+
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+
+
+                <group col="3">
+
+                    <group>
+                        <h4>مركز تكلفة انتاج وتنقية المياه (محطات وخدمات الانتاج)</h4>
+                         <br/>
+                         <br/>
+                            <field name="workcost" /><br/>
+                            <field name="gas" /> <br/>
+                            <field name="electr" /> <br/>
+                            <field name="messi" /><br/>
+                            <field name="lost" /><br/>
+                            <field name="coomer" /><br/>
+                            <field name="others" /><br/>
+                            <field name="lostandcomm" />
+                    </group>
+
+
+
+                        <group>
+                        <h4>مركز تكلفة النقل والتوزيع (شبكات وروافع)</h4>
+                         <br/>
+                         <br/>
+                            <field name="workcost2" /><br/>
+                            <field name="gas2" /> <br/>
+                            <field name="electr2" /> <br/>
+                            <field name="messi2" /><br/>
+                            <field name="lost2" /><br/>
+                            <field name="coomer2" /><br/>
+                            <field name="others2" /><br/>
+                            <field name="lostandcomm2" />
+                    </group>
+
+                        <group>
+                        <h4> مركز تكلفة الحسابات وخدمة العملاء, الإدارية </h4>
+                         <br/>
+                         <br/>
+                            <field name="workcost3" /><br/>
+                            <field name="gas3" /> <br/>
+                            <field name="electr3" /> <br/>
+                            <field name="messi3" /><br/>
+                            <field name="lost3" /><br/>
+                            <field name="coomer3" /><br/>
+                            <field name="others3" /><br/>
+                            <field name="lostandcomm3" />
+                    </group>
+
+
+
+                </group>
+
+   </sheet> </form>
+
+</field>
+</record>
+
+
+
+
+
+    <record id="costpercubic_tree" model="ir.ui.view">
+        <field name="name">تكلفة المتر المكعب من المياه المنتجة</field>
+        <field name="model">costpercubic.mod</field>
+        <field name="arch" type="xml">
+            <tree>
+
+            </tree>
+        </field>
+    </record>
+
+
+
+
+
+
+
+
+
+
+
+</odoo>

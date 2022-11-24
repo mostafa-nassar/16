@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"    ?>
+
+<odoo>
+    <record id="waterComp_form" model="ir.ui.view">
+        <field name="name">water_compony_form</field>
+        <field name="model">water.comp</field>
+        <field name="arch" type="xml">
+
+            <form>
+                <sheet>
+
+
+
+
+
+
+
+
+                    <div class="oe_title">
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <h2>
+تحليل تاريخي لكميات المياه المنتجة والمباعة
+                        </h2>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+
+                    </div>
+
+                    <group>
+                        <group>
+                            <field name="componyName"/>
+                        </group>
+                        <group>
+                            <field name="fiscalyear"/>
+                        </group>
+                    </group>
+
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+
+                    <notebook>
+                        <page string="جدول- كميات المياه المنتجة" >
+                            <h6    dir="rtl">
+                                البيان
+                            </h6>
+                            <br/>
+                            <br/>
+
+                            <group>
+
+
+                                            <group>
+
+                                                <field name="watermajored" class="text-right"   />
+                                                <field name="unit1"/>
+   <br/>
+                                                <field name="waterunamaj"/>
+                                                <field name="unit1"/>
+                                                   <br/>
+                                                <field name="resultwater"/>
+                                                      <field name="unit1"/>
+                                                <br/>
+                                                          <field name="waterforsale"/>
+                                                      <field name="unit1"/>
+                                                   <br/>
+                                                <field name="wateravilabelforsale"/>
+                                                      <field name="unit1"/>
+                                            </group>
+
+
+
+
+
+                            </group>
+
+
+
+                        </page>
+
+                        <page col="2" string="بيان بكمية المياه المنتجة وفقاً لمصدر المحطات">
+
+
+
+                            <group>
+                                <group>
+         <h6>
+                                البيان
+                            </h6>
+                            <br/>
+                            <br/>
+
+                            <field name="wtareamountfix"/>
+                                        <field name="unit1"/>
+                                                   <br/>
+                            <field name="wateramountmotile"/>
+                                        <field name="unit1"/>
+                                                   <br/>
+                            <field name="waterErtewazic"/>
+                                        <field name="unit1"/>
+                                                   <br/>
+                            <field name="watersae"/>
+                                        <field name="unit1"/>
+                                                   <br/>
+                            <field name="reswater2"/>
+    <field name="unit1"/>
+
+                            </group>
+                                <group>
+                                               <h6>
+                                البيان
+                            </h6>
+                            <br/>
+                            <br/>
+                        <field name="majordsaledwater"/>
+                                         <field name="unit2"/>
+                                                   <br/>
+                        <field name="unmajordsaledwater"/>
+                                         <field name="unit2"/>
+                                                   <br/>
+                        <field name="totalsaledwater"/>
+     <field name="unit1"/>
+
+
+
+
+
+
+                                </group>
+                            </group>
+
+                        </page>
+
+<page string="بيان نسبة الصرف المعالج إلى الصرف المجمع">
+<h4>البيان</h4>
+<group>
+
+    <field name="collecteedsoua" />
+    <field name="unit2"/>
+    <br/>
+        <field name="collectedunprocsoa" />
+    <field name="unit2"/>
+    <br/>
+        <field name="precesoa" />
+    <field name="unit2"/>
+    <br/>
+           <field name="precesoafromagancy" />
+    <field name="unit2"/>
+
+
+
+
+</group>
+
+
+
+</page>
+
+                        <page string="كمية المياه المباعة وفقاً لفئات المحاسبة" >
+                            <group col="2" >
+
+                                <group >
+                                    <h4>البيان</h4>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <field name="house_usege" />
+                                     <field name="unit1"/>
+                                                   <br/>
+                                <field name="coomer_usege" />
+                                     <field name="unit1"/>
+                                                   <br/>
+                                <field name="tour_usege" />
+                                     <field name="unit1"/>
+                                                   <br/>
+                                <field name="gove_usege" />
+                                     <field name="unit1"/>
+                                                   <br/>
+                                <field name="serv_usege" />
+                                     <field name="unit1"/>
+                                                   <br/>
+                                <field name="indus_usege" />
+                                     <field name="unit1"/>
+                                                   <br/>
+                                <field name="sports_usege" />
+                                     <field name="unit1"/>
+                                                   <br/>
+                                <field name="other_usege" />
+                                     <field name="unit1"/>
+                                                   <br/>
+                                <field name="total" />
+
+                                </group>
+
+                                <group >
+                                    <h4>البيان</h4>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <field name="popnum" />
+                                <field name="citynum" />
+                                <field name="regnum" />
+                                <field name="bloknum" />
+
+
+
+                                </group>
+
+
+
+                            </group>
+
+
+
+                        </page>
+
+                    <page string="خدمة مياه الشرب/الصرف الصحى"  col="2">
+<br></br>
+<br></br>
+                        <group>
+<group>
+    <h4>خدمة مياه الشرب</h4>
+    <br/>
+                                                        <field name="pophavwater" />
+    <br/>
+                                                        <field name="citywithwater" />
+        <br/>
+
+                                                        <field name="vlgwithwater" />
+        <br/>
+
+                                                        <field name="blockwithwater" />
+</group>
+<group >
+      <h4>خدمة الصرف الصحى</h4>
+    <br/>
+
+                                                           <field name="pophavsou" />
+    <br/>
+                                                        <field name="citywithsou" />
+        <br/>
+
+                                                        <field name="vlgwithsou" />
+        <br/>
+
+                                                        <field name="blockwithsou" />
+
+
+
+</group>
+
+</group>
+                    </page>
+
+
+
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="waterComp_tree" model="ir.ui.view">
+        <field name="name">water_compony_tree</field>
+        <field name="model">water.comp</field>
+        <field name="arch" type="xml">
+            <tree>
+
+                             <field name="componyName"/>
+                <field name="fiscalyear"/>
+
+
+            </tree>
+        </field>
+    </record>
+
+
+
+
+
+    <record id="waterComp_search" model="ir.ui.view">
+        <field name="name">search</field>
+        <field name="model">water.comp</field>
+        <field name="arch" type="xml">
+            <search>
+                <searchpanel>
+                    <field name="fiscalyear" string="السنه الماليه" enable_counters="1"/>
+                    <field name="componyName" string="أسم الشركة " enable_counters="1"/>
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</odoo>

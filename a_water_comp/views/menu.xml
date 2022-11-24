@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem
+            id="water_comp"
+            name="جهاز تنظيم المياه  "
+            sequence="0"
+    />
+
+    <record id="water_compony_action" model="ir.actions.act_window">
+        <field name="name">تحليل تاريخي لكميات المياه المنتجة والمباعة
+</field>
+        <field name="res_model">water.comp</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="type">ir.actions.act_window</field>
+    </record>
+
+
+    <menuitem
+    id="sup_menu"
+    sequence="0"
+    parent="water_comp"
+    action="water_compony_action"
+    />
+
+
+
+    <record id="fiscalyear_action" model="ir.actions.act_window">
+        <field name="name">السنه الماليه </field>
+        <field name="res_model">fiscal.year</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="type">ir.actions.act_window</field>
+    </record>
+
+
+
+    <menuitem
+    id="fiscalyear_sup_menu"
+    sequence="10"
+    parent="water_comp"
+    action="fiscalyear_action"
+    />
+
+
+
+
+
+
+
+    <record id="operating_surplus_action" model="ir.actions.act_window">
+        <field name="name">الفائض/ العجز التشغيلي </field>
+        <field name="res_model">operating.surplus</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="type">ir.actions.act_window</field>
+    </record>
+
+
+
+    <menuitem
+    id="operating_surplus_sup_menu"
+    sequence="11"
+    parent="water_comp"
+    action="operating_surplus_action"
+    />
+
+
+
+
+
+
+    <record id="electricity_action" model="ir.actions.act_window">
+        <field name="name">بيان الكهرباء </field>
+        <field name="res_model">electricity.mod</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="type">ir.actions.act_window</field>
+    </record>
+
+
+
+    <menuitem
+    id="electricity_sup_menu"
+    sequence="12"
+    parent="water_comp"
+    action="electricity_action"
+    />
+
+
+
+
+    <record id="costpercubic_action" model="ir.actions.act_window">
+        <field name="name"> تكلفة المتر المكعب من المياه المنتجة </field>
+        <field name="res_model">costpercubic.mod</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="type">ir.actions.act_window</field>
+    </record>
+
+
+
+    <menuitem
+    id="costpercubic_sup_menu"
+    sequence="13"
+    parent="water_comp"
+    action="costpercubic_action"
+    />
+
+
+
+    <record id="cwaterstatement_action" model="ir.actions.act_window">
+        <field name="name"> بيان تحليلي بكمية المياه المباعة </field>
+        <field name="res_model">water.statement</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="type">ir.actions.act_window</field>
+    </record>
+
+
+
+    <menuitem
+    id="cwaterstatement_sup_menu"
+    sequence="14"
+    parent="water_comp"
+    action="cwaterstatement_action"
+    />
+
+
+
+
+
+    <record id="compname_action" model="ir.actions.act_window">
+        <field name="name">الشركات </field>
+        <field name="res_model">compony_name</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="type">ir.actions.act_window</field>
+    </record>
+
+
+
+    <menuitem
+    id="replacement_sup_menu"
+    sequence="16"
+    parent="water_comp"
+    action="compname_action"
+    />
+
+
+
+    <record id="staffnumber_action" model="ir.actions.act_window">
+        <field name="name">عدد العاملين </field>
+        <field name="res_model">staff.number</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="type">ir.actions.act_window</field>
+    </record>
+
+
+
+    <menuitem
+    id="staffnumber_sup_menu"
+    sequence="17"
+    parent="water_comp"
+    action="staffnumber_action"
+    />
+
+
+    <record id="collectiontable_action" model="ir.actions.act_window">
+        <field name="name">مدخلات نسب التحصيل </field>
+        <field name="res_model">collection.table</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="type">ir.actions.act_window</field>
+    </record>
+
+
+
+    <menuitem
+    id="collectiontable_sup_menu"
+    sequence="18"
+    parent="water_comp"
+    action="collectiontable_action"
+    />
+
+
+    <record id="investmen_action" model="ir.actions.act_window">
+        <field name="name"> المشروعات الإستثمارية </field>
+        <field name="res_model">investment.projects</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="type">ir.actions.act_window</field>
+    </record>
+
+
+
+    <menuitem
+    id="investmen_sup_menu"
+    sequence="19"
+    parent="water_comp"
+    action="investmen_action"
+    />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <record id="replacementcosting_action" model="ir.actions.act_window">
+        <field name="name">تكلفة الإحلال والتجديد  </field>
+        <field name="res_model">replacement.cost</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="type">ir.actions.act_window</field>
+    </record>
+
+
+
+    <menuitem
+    id="replacementcosting_sup_menu"
+    sequence="22"
+    parent="water_comp"
+    action="replacementcosting_action"
+    />
+
+
+
+
+
+
+</odoo>

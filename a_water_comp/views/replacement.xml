@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+
+
+    <record id="replacementcost_form" model="ir.ui.view">
+<field name="name">replacement_form</field>
+<field name="model">replacement.cost</field>
+<field name="arch" type="xml">
+    <form>
+            <sheet>
+                <h1>تكلفة الإحلال والتجديد والمشروعات الجديدة</h1>
+
+                <br/>
+                <br/>
+                <br/>  <br/>
+                <br/>
+                <br/>
+
+                    <group>
+                        <group>
+                            <field name="componyName"/>
+                        </group>
+                        <group>
+                            <field name="fiscalyear"/>
+                        </group>
+                    </group>
+
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+
+
+
+                <group col="2">
+
+
+                    <group>
+                        <h3>المنصرف من الخطة الإستثمارية</h3>
+                        <br/>
+                        <br/>
+
+                        <field name="replac" />
+                        <br/>
+                        <field name="localspoi" />
+                        <br/>
+                        <field name="totalinvpl" />
+                    </group>
+
+
+                    <group>
+                        <h3>رصيد المخزون</h3>
+                        <br/>
+                        <br/>
+                        <field name="materials" />
+                        <br/> <field name="fuel" />
+                        <br/> <field name="oils" />
+                        <br/> <field name="chpar" />
+                        <br/> <field name="messions" />
+                        <br/> <field name="weasts" />
+                        <br/> <field name="itemsforsales" />
+                        <br/> <field name="totalstorepoint" />
+
+                    </group>
+
+
+
+                </group>
+
+
+
+
+
+            </sheet>
+    </form>
+</field>
+    </record>
+
+
+
+       <record id="replacementcost_tree" model="ir.ui.view">
+        <field name="name">replacement_tree</field>
+        <field name="model">replacement.cost</field>
+        <field name="arch" type="xml">
+            <tree>
+<field name="replac"></field>
+            </tree>
+        </field>
+    </record>
+
+
+
+
+
+
+
+
+</odoo>

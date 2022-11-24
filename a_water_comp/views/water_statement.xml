@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"    ?>
+
+<odoo>
+
+
+
+    <record id="waterstatement_form" model="ir.ui.view">
+<field name="name">بيان تحليلي بكمية المياه المباعة</field>
+<field name="model">water.statement</field>
+<field name="arch" type="xml">
+    <form>
+            <sheet>
+            <h1>
+                بيان تحليلي
+            </h1>
+
+                <br/>
+                <br/>
+                <br/>  <br/>
+                <br/>
+                <br/>
+
+                    <group>
+                        <group>
+                            <field name="componyName"/>
+                        </group>
+                        <group>
+                            <field name="fiscalyear"/>
+                        </group>
+                    </group>
+
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+
+
+                <notebook>
+                    <page col="2"  string="بيان تحليلي بكمية المياه المباعة">
+                        <group>
+
+                            <group >
+                            <h3>كمية المياه المباعة ( عملاء مياه شرب فقط)</h3>
+                            <br/>
+                            <br/>
+                                <field name="house_usege_st" />
+                                <br/>
+                                <field name="coomer_usege_st" />
+                                <br/>
+                                <field name="tour_usege_st" />
+                                <br/>
+                                <field name="gove_usege_st" />
+                                <br/>
+                                <field name="serv_usege_st" />
+                                <br/>
+                                <field name="indus_usege_st" />
+                                <br/>
+                                <field name="sports_usege_st" />
+                                <br/>
+                                <field name="other_usege_st" />
+                                <br/>
+                                <field name="total_st" />
+
+                            </group>
+
+
+
+
+
+
+                                                 <group >
+                   <h3>كمية المياه المباعة ( عملاء مياه شرب و صرف صحى)</h3>
+                            <br/>
+                            <br/>
+                                <field name="house_usege_st2" />
+                                <br/>
+                                <field name="coomer_usege_st2" />
+                                <br/>
+                                <field name="tour_usege_st2" />
+                                <br/>
+                                <field name="gove_usege_st2" />
+                                <br/>
+                                <field name="serv_usege_st2" />
+                                <br/>
+                                <field name="indus_usege_st2" />
+                                <br/>
+                                <field name="sports_usege_st2" />
+                                <br/>
+                                <field name="other_usege_st2" />
+                                <br/>
+                                <field name="total_st2" />
+
+                            </group>
+
+                        </group>
+                    </page>
+
+
+
+
+                    <page col="2"  string="بيان تحليلي بعدد المشتركين">
+                        <group>
+
+                            <group >
+                            <h3>عدد المشتركين ( عملاء مياه شرب فقط)</h3>
+                            <br/>
+                            <br/>
+                                <field name="house_usege_st3" />
+                                <br/>
+                                <field name="coomer_usege_st3" />
+                                <br/>
+                                <field name="tour_usege_st3" />
+                                <br/>
+                                <field name="gove_usege_st3" />
+                                <br/>
+                                <field name="serv_usege_st3" />
+                                <br/>
+                                <field name="indus_usege_st3" />
+                                <br/>
+                                <field name="sports_usege_st3" />
+                                <br/>
+                                <field name="other_usege_st3" />
+                                <br/>
+                                <field name="total_st3" />
+
+                            </group>
+
+
+
+
+
+
+                                                 <group >
+                   <h3>عدد المشتركين ( عملاء مياه شرب فقط)</h3>
+                            <br/>
+                            <br/>
+                                <field name="house_usege_st4" />
+                                <br/>
+                                <field name="coomer_usege_st4" />
+                                <br/>
+                                <field name="tour_usege_st4" />
+                                <br/>
+                                <field name="gove_usege_st4" />
+                                <br/>
+                                <field name="serv_usege_st4" />
+                                <br/>
+                                <field name="indus_usege_st4" />
+                                <br/>
+                                <field name="sports_usege_st4" />
+                                <br/>
+                                <field name="other_usege_st4" />
+                                <br/>
+                                <field name="total_st4" />
+
+                            </group>
+
+                        </group>
+                    </page>
+
+
+
+                    <page col="2"  string="بيان تحليلي بقيمة المياه المباعة والصرف الصحى">
+                        <group>
+
+                            <group >
+                            <h3>قيمة المياه المباعة (عملاء مياه شرب فقط )</h3>
+                            <br/>
+                            <br/>
+                                <field name="house_usege_st5" />
+                                <br/>
+                                <field name="coomer_usege_st5" />
+                                <br/>
+                                <field name="tour_usege_st5" />
+                                <br/>
+                                <field name="gove_usege_st5" />
+                                <br/>
+                                <field name="serv_usege_st5" />
+                                <br/>
+                                <field name="indus_usege_st5" />
+                                <br/>
+                                <field name="sports_usege_st5" />
+                                <br/>
+                                <field name="other_usege_st5" />
+                                <br/>
+                                <field name="total_st5" />
+
+                            </group>
+
+
+                                                 <group >
+                   <h3>قيمة المياه المباعة (عملاء مياه شرب و صرف صحى )</h3>
+                            <br/>
+                            <br/>
+                                <field name="house_usege_st6" />
+                                <br/>
+                                <field name="coomer_usege_st6" />
+                                <br/>
+                                <field name="tour_usege_st6" />
+                                <br/>
+                                <field name="gove_usege_st6" />
+                                <br/>
+                                <field name="serv_usege_st6" />
+                                <br/>
+                                <field name="indus_usege_st6" />
+                                <br/>
+                                <field name="sports_usege_st6" />
+                                <br/>
+                                <field name="other_usege_st6" />
+                                <br/>
+                                <field name="total_st6" />
+
+                            </group>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+
+
+
+
+                                                 <group >
+                   <h3>قيمة الصرف الصحى (عملاء مياه شرب و صرف صحى )</h3>
+                            <br/>
+                            <br/>
+                                <field name="house_usege_st7" />
+                                <br/>
+                                <field name="coomer_usege_st7" />
+                                <br/>
+                                <field name="tour_usege_st7" />
+                                <br/>
+                                <field name="gove_usege_st7" />
+                                <br/>
+                                <field name="serv_usege_st7" />
+                                <br/>
+                                <field name="indus_usege_st7" />
+                                <br/>
+                                <field name="sports_usege_st7" />
+                                <br/>
+                                <field name="other_usege_st7" />
+                                <br/>
+                                <field name="total_st7" />
+
+                            </group>
+
+                                  <group >
+                   <h3>إجمالى عدد المشتركين</h3>
+                            <br/>
+                            <br/>
+                                <field name="act_members" />
+                                      <br/>
+                                <field name="avg_members" />
+
+
+
+                            </group>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </group>
+                    </page>
+
+                </notebook>
+   </sheet> </form>
+
+</field>
+</record>
+
+
+
+
+
+    <record id="waterstatement_tree" model="ir.ui.view">
+        <field name="name">بيان تحليلي بكمية المياه المباعة</field>
+        <field name="model">water.statement</field>
+        <field name="arch" type="xml">
+            <tree>
+
+            </tree>
+        </field>
+    </record>
+
+
+
+
+
+
+
+
+
+
+
+</odoo>
