@@ -106,7 +106,7 @@ class WebsiteHelpdesk_portal(http.Controller):
             'complainresponsedate':vals['complainresponsedate'] if 'complainresponsedate' in vals else 'NULL',
             'providerresponse':vals['providerresponse'] if 'providerresponse' in vals else False,
             'description':vals['description'] if 'description' in vals else False,
-            'partner_id':request.session.customerewra,
+            'partner_id':request.session.customerewra if request.session.customerewra else False,
             # '':vals[''],
             # '':vals[''],
             
