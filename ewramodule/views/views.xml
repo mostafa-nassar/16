@@ -300,7 +300,7 @@
               
                 <!-- <field name="is_complaint"/>
                 <field name="is_responsable"/> -->
-                <field name="companytype" required="1" />
+                <field name="companytype"  />
                 <field name="responsables"        attrs="{'invisible':[('companytype','=','responsable')]  }"
                   domain="[('companytype', '=', 'responsable')]"  />
             </xpath>

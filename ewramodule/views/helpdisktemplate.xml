@@ -10,39 +10,55 @@
     
     <xpath expr="//div[@name='description']" position="before">
 
-        <div class="row mb-4" t-if="ticket.complaincode">
+        <span class="row">
+
+        <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.complaincode">
             <strong class="col-lg-2">كود الشكوى</strong>
             <span class="col-lg-10" t-field="ticket.complaincode"/>
         </div>
 
-            <div class="row mb-4" t-if="ticket.complainername">
+            <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.complainername">
                 <strong class="col-lg-2">إسم الشاكى</strong>
                 <span class="col-lg-10" t-field="ticket.complainername"/>
             </div>
+        </span>
 
-            <div class="row mb-4" t-if="ticket.national_id">
+
+        <span class="row">
+            <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.national_id">
                 <strong class="col-lg-2">الرقم القومى</strong>
                 <span class="col-lg-10" t-field="ticket.national_id"/>
             </div>
 
-            <div class="row mb-4" t-if="ticket.governate.name">
+            <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.governate.name">
                 <strong class="col-lg-2">المحافظة</strong>
                 <span class="col-lg-10" t-field="ticket.governate.name"/>
             </div>
 
-            <div class="row mb-4" t-if="ticket.city">
+            </span>
+
+
+
+            <span class="row">
+            <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.city">
                 <strong class="col-lg-2">قسم/ قرية/ مركز</strong>
                 <span class="col-lg-10" t-field="ticket.city"/>
             </div>
 
 
-            <div class="row mb-4" t-if="ticket.adress">
+            <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.adress">
                 <strong class="col-lg-2">عنوان الشاكى</strong>
                 <span class="col-lg-10" t-field="ticket.adress"/>
             </div>
+            </span>
 
 
-            <div class="row mb-4" t-if="ticket.complainer_tele">
+
+
+
+
+            <span class="row">
+            <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.complainer_tele">
                 <strong class="col-lg-2">تليفون العميل</strong>
                 <span class="col-lg-10" t-field="ticket.complainer_tele"/>
             </div>
@@ -54,57 +70,75 @@
             </div> -->
 
 
-            <div class="row mb-4" t-if="ticket.complaineremail">
+            <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.complaineremail">
                 <strong class="col-lg-2">البريد الإلكتروني</strong>
                 <span class="col-lg-10" t-field="ticket.complaineremail"/>
             </div>
+            </span>
 
 
-            <div class="row mb-4" t-if="ticket.complaintype.name">
+            <span class="row">
+
+            <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.complaintype.name">
                 <strong class="col-lg-2">نوع الشكوى</strong>
                 <span class="col-lg-10" t-field="ticket.complaintype.name"/>
             </div>
 
 
-            <div class="row mb-4" t-if="ticket.complainreason.name">
+            <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.complainreason.name">
                 <strong class="col-lg-2">سبب الشكوي</strong>
                 <span class="col-lg-10" t-field="ticket.complainreason.name"/>
             </div>
-
+            </span>
 
             <!-- <div class="row mb-4">
                 <strong class="col-lg-2">المحافظة</strong>
                 <span class="col-lg-10" t-field="ticket.complainername"/>
             </div> -->
 
-
-            <div class="row mb-4" t-if="ticket.subscriptionnumber">
+            <span class="row">
+            <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.subscriptionnumber">
                 <strong class="col-lg-2">رقم الاشتراك</strong>
                 <span class="col-lg-10" t-field="ticket.subscriptionnumber"/>
             </div>
 
 
-            <div class="row mb-4" t-if="ticket.areanumber">
+            <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.areanumber">
                 <strong class="col-lg-2" >رقم المنطقة</strong>
                 <span class="col-lg-10" t-field="ticket.areanumber"/>
             </div>
+            </span>
 
-            <div class="row mb-4" t-if="ticket.responsableparty">
+
+
+            <span class="row">
+            <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.responsableparty">
                 <strong class="col-lg-2">الجهة المسئولة</strong>
                 <span class="col-lg-10" t-field="ticket.responsableparty"/>
             </div>
-            <div class="row mb-4" t-if="ticket.serviceprovider">
+            <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.serviceprovider">
                 <strong class="col-lg-2">مقدم الخدمة</strong>
                 <span class="col-lg-10" t-field="ticket.serviceprovider"/>
             </div>
-            <div class="row mb-4" t-if="ticket.reportingcode">
+            </span>
+
+
+
+            <span class="row">
+            <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.reportingcode">
                 <strong class="col-lg-2">كود الشكوي لدي مقدم الخدمة</strong>
                 <span class="col-lg-10" t-field="ticket.reportingcode"/>
             </div>
-            <div class="row mb-4" t-if="ticket.complaindate">
+            <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.complaindate">
                 <strong class="col-lg-2">تاريخ الإبلاغ</strong>
                 <span class="col-lg-10" t-field="ticket.complaindate"/>
             </div>
+            </span>
+
+
+
+
+            
             <div class="row mb-4" t-if="ticket.providerresponse">
                 <strong class="col-lg-2">تاريخ رد الشركة</strong>
                 <span class="col-lg-10" t-field="ticket.complainresponsedate"/>
@@ -113,8 +147,9 @@
             <div class="row mb-4" t-if="ticket.providerresponse">
                 <strong class="col-lg-2">رد مقدم الخدمة</strong>
                 <span class="col-lg-10" t-field="ticket.providerresponse"/>
+              
             </div> 
-
+            
 
             
 
@@ -130,7 +165,7 @@
 
         </xpath>
         <xpath expr="//div[@name='description']" position="after">
-            <span t-if="ticket.providerresponse==''  class="ewraportalresponseclass">
+            <span t-if="ticket.providerresponse=='' and request.session.usertype == 'complainers'" class="ewraportalresponseclass">
             <form id="ewraportalresponse" name="ewraportalresponse" >
                 <div class="form-group">
                     <label for="response">رد مقدم الخدمة</label>

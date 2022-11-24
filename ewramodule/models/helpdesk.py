@@ -39,7 +39,9 @@ class ModelName(models.Model):
     
     
     complainresponsedate=fields.Char(string='تاريخ رد الشركة')
-    providerresponse=fields.Text(string='رد مقدم الخدمة')
+    providerresponse=fields.Text(string='رد مقدم الخدمة',
+    track_visibility='onchange'
+    )
     @api.model
     def create_help_ticket_portal(self,vals):
         # if not (self.env.user.employee_id):
@@ -67,6 +69,7 @@ class ModelName(models.Model):
             'complainresponsedate':vals['complainresponsedate'] if 'complainresponsedate' in vals else False,
             'providerresponse':vals['providerresponse'] if 'providerresponse' in vals else False,
             'description':vals['description'] if 'description' in vals else False,
+            
             # '':vals[''],
             # '':vals[''],
             

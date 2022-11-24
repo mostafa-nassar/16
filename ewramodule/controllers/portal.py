@@ -15,6 +15,7 @@ class CustomerPortalInhert(portal.CustomerPortal):
     def _prepare_helpdesk_tickets_domain(self):
         account=request.env.context.get('uid')
         user=request.env['res.users'].search([('id','=',account)])
+        usertype=""
         if user.parent_id:
             parent=user.parent_id
             usertype=parent.companytype
@@ -25,12 +26,13 @@ class CustomerPortalInhert(portal.CustomerPortal):
                 
         
         if usertype:
+            request.session['usertype']=usertype
             if usertype=='responsable':
                 domains=[('responsableparty','=',userid)]
             else:
                 domains=[('serviceprovider','=',userid)]
         else:
-            domains=[]        
+            domains=[('partner_id','=',userid)]        
         return domains
     def _prepare_home_portal_values(self, counters):
         #values = super()._prepare_home_portal_values(counters)
