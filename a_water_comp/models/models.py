@@ -167,14 +167,14 @@ class waterComp(models.Model):
 
 
 
-        house_usege = fields.Float(string='منزلى')
-        coomer_usege = fields.Float(string='تجارى')
-        tour_usege = fields.Float(string='سياحى')
-        gove_usege = fields.Float(string='حكومى')
-        serv_usege = fields.Float(string='خدمي')
-        indus_usege = fields.Float(string='صناعي')
-        sports_usege = fields.Float(string='أندية رياضية')
-        other_usege = fields.Float(string='أخري')
+        house_usege = fields.Float(string=' كميه المياه المباعة / منزلى')
+        coomer_usege = fields.Float(string=' كميه المياه المباعة / تجارى')
+        tour_usege = fields.Float(string=' كميه المياه المباعة / سياحى')
+        gove_usege = fields.Float(string=' كميه المياه المباعة / حكومى')
+        serv_usege = fields.Float(string=' كميه المياه المباعة / خدمي')
+        indus_usege = fields.Float(string=' كميه المياه المباعة / صناعي')
+        sports_usege = fields.Float(string=' كميه المياه المباعة / أندية رياضية')
+        other_usege = fields.Float(string=' كميه المياه المباعة / أخري')
         total= fields.Float('الاجمالى'   , compute='calcu_sum4',store=True)
 
 
