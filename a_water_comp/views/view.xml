@@ -80,6 +80,8 @@
 
                                     <group>
                                         <field name="watermatjorper" />
+                                        <br/>
+                                        <br/>
                                         <field name="unwatermatjorper" />
                                     </group>
 
@@ -104,19 +106,18 @@
                             <br/>
 
                             <field name="wtareamountfix"/>
-                                        <field name="unit1"/>
                                                    <br/>
                             <field name="wateramountmotile"/>
-                                        <field name="unit1"/>
+<!--                                        <field name="unit1"/>-->
                                                    <br/>
                             <field name="waterErtewazic"/>
-                                        <field name="unit1"/>
+<!--                                        <field name="unit1"/>-->
                                                    <br/>
                             <field name="watersae"/>
-                                        <field name="unit1"/>
+<!--                                        <field name="unit1"/>-->
                                                    <br/>
                             <field name="reswater2"/>
-    <field name="unit1"/>
+<!--    <field name="unit1"/>-->
 
                             </group>
                                 <group>
@@ -126,13 +127,13 @@
                             <br/>
                             <br/>
                         <field name="majordsaledwater"/>
-                                         <field name="unit2"/>
+<!--                                         <field name="unit2"/>-->
                                                    <br/>
                         <field name="unmajordsaledwater"/>
-                                         <field name="unit2"/>
+<!--                                         <field name="unit2"/>-->
                                                    <br/>
                         <field name="totalsaledwater"/>
-     <field name="unit1"/>
+<!--     <field name="unit1"/>-->
 
 
 
@@ -149,16 +150,16 @@
 <group>
 
     <field name="collecteedsoua" />
-    <field name="unit2"/>
+<!--    <field name="unit2"/>-->
     <br/>
         <field name="collectedunprocsoa" />
-    <field name="unit2"/>
+<!--    <field name="unit2"/>-->
     <br/>
         <field name="precesoa" />
-    <field name="unit2"/>
+<!--    <field name="unit2"/>-->
     <br/>
            <field name="precesoafromagancy" />
-    <field name="unit2"/>
+<!--    <field name="unit2"/>-->
 
 
 
@@ -178,28 +179,28 @@
                                 <br></br>
                                 <br></br>
                                 <field name="house_usege" />
-                                     <field name="unit1"/>
+<!--                                     <field name="unit1"/>-->
                                                    <br/>
                                 <field name="coomer_usege" />
-                                     <field name="unit1"/>
+<!--                                     <field name="unit1"/>-->
                                                    <br/>
                                 <field name="tour_usege" />
-                                     <field name="unit1"/>
+<!--                                     <field name="unit1"/>-->
                                                    <br/>
                                 <field name="gove_usege" />
-                                     <field name="unit1"/>
+<!--                                     <field name="unit1"/>-->
                                                    <br/>
                                 <field name="serv_usege" />
-                                     <field name="unit1"/>
+<!--                                     <field name="unit1"/>-->
                                                    <br/>
                                 <field name="indus_usege" />
-                                     <field name="unit1"/>
+<!--                                     <field name="unit1"/>-->
                                                    <br/>
                                 <field name="sports_usege" />
-                                     <field name="unit1"/>
+<!--                                     <field name="unit1"/>-->
                                                    <br/>
                                 <field name="other_usege" />
-                                     <field name="unit1"/>
+<!--                                     <field name="unit1"/>-->
                                                    <br/>
                                 <field name="total" />
 
