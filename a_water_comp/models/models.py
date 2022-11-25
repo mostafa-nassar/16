@@ -83,27 +83,60 @@ class waterComp(models.Model):
         sewatst = fields.Float(' نسبة المياه المنتجه  / محطات تحلية مياه بحار ' ,compute='calcu_sum02' ,store=True)
         sum0 = fields.Float(' نسبة / كمية المياه المنتجة' ,compute='calcu_sum01' ,store=True)
 
-        def startcompute(self):
 
-                @api.depends('surfacestat', 'wtareamountfix', 'reswater2')
-                def calcu_sum00(self):
-                        for rec in self:
-                                rec.surfacestat = rec.wtareamountfix / rec.reswater2
+        @api.depends('surfacestat','wtareamountfix','reswater2')
+        def calcu_sum00(self):
+                for rec in self:
+                        rec.surfacestat=rec.wtareamountfix / rec.reswater2
 
-                @api.depends('ertwez', 'sewatst', 'surfacestat', 'sum0')
-                def calcu_sum01(self):
-                        for rec in self:
-                                rec.sum0 = rec.sewatst + rec.ertwez + rec.surfacestat
 
-                @api.depends('sewatst', 'watersae', 'reswater2')
-                def calcu_sum02(self):
-                        for rec in self:
-                                rec.sewatst = rec.watersae / rec.reswater2
 
-                @api.depends('ertwez', 'waterErtewazic', 'reswater2')
-                def calcu_sum03(self):
-                        for rec in self:
-                                rec.ertwez = rec.waterErtewazic / rec.reswater2
+        @api.depends('ertwez','sewatst','surfacestat','sum0')
+        def calcu_sum01(self):
+                for rec in self:
+                        rec.sum0 =rec.sewatst+ rec.ertwez+rec.surfacestat
+
+
+
+
+        @api.depends('sewatst','watersae','reswater2')
+        def calcu_sum02(self):
+                for rec in self:
+                        rec.sewatst=rec.watersae / rec.reswater2
+
+
+
+
+
+        @api.depends('ertwez','waterErtewazic','reswater2')
+        def calcu_sum03(self):
+                for rec in self:
+                        rec.ertwez=rec.waterErtewazic / rec.reswater2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         majordsaledwater=fields.Float('كمية المياه المباعة المقاسة')

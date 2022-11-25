@@ -10,11 +10,6 @@
 
                 <sheet>
 
-         <header>
-                    <button name="startcompute" string="compute" type="action" class="oe_highlight"/>
-
-                </header>
-
 
 
 
