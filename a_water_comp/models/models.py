@@ -178,12 +178,87 @@ class waterComp(models.Model):
         total= fields.Float('الاجمالى'   , compute='calcu_sum4',store=True)
 
 
-
-
         @api.depends('house_usege', 'coomer_usege', 'tour_usege','gove_usege','serv_usege', 'indus_usege','sports_usege', 'other_usege','total')
         def calcu_sum4(self):
                 for rec in self:
                         rec.total= rec.house_usege+ rec.coomer_usege+rec.tour_usege+rec.gove_usege+rec.serv_usege+rec.indus_usege+rec.sports_usege+rec.other_usege
+
+
+        house_usegeper = fields.Float(string='منزلى' ,compute='calcu0_house',store=True)
+        coomer_usegeper = fields.Float(string='تجارى', compute='calcu0_coomer',store=True)
+        tour_usegeper = fields.Float(string='سياحى' ,compute='calcu0_tour',store=True)
+        gove_usegeper = fields.Float(string='حكومى', compute='calcu0_gov',store=True)
+        serv_usegeper = fields.Float(string='خدمي' ,compute='calc_serv',store=True)
+        indus_usegeper = fields.Float(string='صناعي' ,compute='calc_indus',store=True)
+        sports_usegeper = fields.Float(string='أندية رياضية' ,compute='calc_sports',store=True)
+        other_usegeper = fields.Float(string='أخري' ,compute='calc_other',store=True)
+
+
+        @api.depends('house_usegeper','house_usege','total')
+        def calcu0_house(self):
+                for rec in self:
+                        rec.house_usegeper = rec.house_usege / rec.total
+
+
+        @api.depends('coomer_usegeper','coomer_usege','total')
+        def calcu0_coomer(self):
+                for rec in self:
+                        rec.coomer_usegeper = rec.coomer_usege / rec.total
+
+
+        @api.depends('tour_usegeper','tour_usege','total')
+        def calcu0_tour(self):
+                for rec in self:
+                        rec.tour_usegeper = rec.tour_usege / rec.total
+
+
+        @api.depends('gove_usegeper','gove_usege','total')
+        def calcu0_gov(self):
+                for rec in self:
+                        rec.gove_usegeper = rec.gove_usege / rec.total
+
+
+
+        @api.depends('serv_usegeper','serv_usege','total')
+        def calc_serv(self):
+                for rec in self:
+                        rec.serv_usegeper = rec.serv_usege / rec.total
+
+
+        @api.depends('indus_usegeper','indus_usege','total')
+        def calc_indus(self):
+                for rec in self:
+                        rec.indus_usegeper = rec.indus_usege / rec.total
+
+
+
+
+        @api.depends('sports_usegeper','sports_usege','total')
+        def calc_sports(self):
+                for rec in self:
+                        rec.sports_usegeper = rec.sports_usege / rec.total
+
+
+
+        @api.depends('other_usegeper','other_usege','total')
+        def calc_other(self):
+                for rec in self:
+                        rec.other_usegeper = rec.other_usege / rec.total
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -153,7 +153,10 @@
                                     <field name="sum0"/>
                                     <br/>
 
-                <group >
+
+                                </group>
+
+                                         <group >
                                   <h4>البيان</h4>
                                 <br></br>
                                 <br></br>
@@ -163,10 +166,9 @@
                     </group>
 
 
-                                </group>
-
 
                             </group>
+
 
                         </page>
 
@@ -230,6 +232,42 @@
                                 <field name="total" />
 
                                 </group>
+
+
+
+                                <group >
+                                    <h4>النسب المئوية</h4>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <field name="house_usegeper" />
+<!--                                     <field name="unit1"/>-->
+                                                   <br/>
+                                <field name="coomer_usegeper" />
+<!--                                     <field name="unit1"/>-->
+                                                   <br/>
+                                <field name="tour_usegeper" />
+<!--                                     <field name="unit1"/>-->
+                                                   <br/>
+                                <field name="gove_usegeper" />
+<!--                                     <field name="unit1"/>-->
+                                                   <br/>
+                                <field name="serv_usegeper" />
+<!--                                     <field name="unit1"/>-->
+                                                   <br/>
+                                <field name="indus_usegeper" />
+<!--                                     <field name="unit1"/>-->
+                                                   <br/>
+                                <field name="sports_usegeper" />
+<!--                                     <field name="unit1"/>-->
+                                                   <br/>
+                                <field name="other_usegeper" />
+<!--                                     <field name="unit1"/>-->
+                                </group>
+
+
+
+
 
                                 <group >
                                     <h4>البيان</h4>
