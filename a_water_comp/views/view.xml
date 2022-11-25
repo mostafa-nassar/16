@@ -118,10 +118,10 @@
                                                    <br/>
                             <field name="reswater2"/>
 <!--    <field name="unit1"/>-->
+                                                   <br/>
+                                                   <br/>
 
-                            </group>
-                                <group>
-                                               <h6>
+                                                                                   <h6>
                                 البيان
                             </h6>
                             <br/>
@@ -136,8 +136,23 @@
 <!--     <field name="unit1"/>-->
 
 
+                            </group>
 
+                                <group>
 
+                                                           <h6>
+                                النسب المئوية
+                            </h6>
+                            <br/>
+                                    <br/>
+                                    <field name="surfacestat"/>
+                                    <br/>
+                                    <field name="ertwez"/>
+                                    <br/>
+                                    <field name="sewatst"/>
+                                    <br/>
+                                    <field name="sum0"/>
+                                    <br/>
 
 
                                 </group>

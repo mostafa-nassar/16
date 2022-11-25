@@ -25,6 +25,19 @@ class waterComp(models.Model):
         unwatermatjorper = fields.Float('نسبة كمية الانتاج غير المقاس من المياه'  ,compute='calc1' ,store=True)
 
 
+        surfacestat = fields.Float('محطات سطحية' )
+        ertwez = fields.Float(' أبار إرتوازية' )
+        sewatst = fields.Float('محطات تحلية مياه بحار ' )
+        sum0 = fields.Float('كمية المياه المنتجة' )
+
+
+        @api.depends('surfacestat','waterunamaj','resultwater')
+        def calcu_sum(self):
+                for rec in self:
+                        rec.resultwater=rec.waterunamaj + rec.watermajored
+
+
+
 
         @api.depends('watermajored','waterunamaj','resultwater')
         def calcu_sum(self):
@@ -56,6 +69,75 @@ class waterComp(models.Model):
         def calcu_sum2(self):
                 for rec in self:
                         rec.reswater2 = rec.wtareamountfix + rec.wateramountmotile +rec.waterErtewazic+rec.watersae
+
+
+
+
+
+
+
+
+
+        surfacestat = fields.Float('محطات سطحية' ,compute='calcu_sum00' ,store=True)
+        ertwez = fields.Float(' أبار إرتوازية', compute='calcu_sum01' ,store=True)
+        sewatst = fields.Float('محطات تحلية مياه بحار ' ,compute='calcu_sum02' ,store=True)
+        sum0 = fields.Float('كمية المياه المنتجة' ,compute='calcu_sum03' ,store=True)
+
+
+        @api.depends('surfacestat','wtareamountfix','reswater2')
+        def calcu_sum00(self):
+                for rec in self:
+                        rec.surfacestat=rec.wtareamountfix / rec.reswater2
+
+
+
+        @api.depends('ertwez','sewatst','surfacestat','sum0')
+        def calcu_sum01(self):
+                for rec in self:
+                        rec.sum0 =rec.sewatst+ rec.ertwez+rec.surfacestat
+
+
+
+
+        @api.depends('sewatst','watersae','reswater2')
+        def calcu_sum02(self):
+                for rec in self:
+                        rec.sewatst=rec.watersae / rec.reswater2
+
+
+
+
+
+        @api.depends('sewatst','watersae','reswater2')
+        def calcu_sum02(self):
+                for rec in self:
+                        rec.sewatst=rec.watersae / rec.reswater2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         majordsaledwater=fields.Float('كمية المياه المباعة المقاسة')
         unmajordsaledwater=fields.Float('كمية المياه المباعة الغير مقاسة')
