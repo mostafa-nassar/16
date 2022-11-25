@@ -35,7 +35,7 @@ class waterComp(models.Model):
         @api.depends('watermajored','resultwater','watermatjorper')
         def calc0(self):
                 for rec in self:
-                        rec.watermatjorper = rec.watermajored / rec.waterunamaj
+                        rec.watermatjorper = rec.watermajored / rec.resultwater
 
         @api.depends('unwatermatjorper', 'watermatjorper')
         def calc1(self):
@@ -46,7 +46,7 @@ class waterComp(models.Model):
 
 
 
-wtareamountfix= fields.Float('كمية المياه المنتجة من المحطات الثابتة')
+        wtareamountfix= fields.Float('كمية المياه المنتجة من المحطات الثابتة')
         wateramountmotile =fields.Float('كمية المياه المنتجة من المحطات النقالى')
         waterErtewazic=fields.Float('كمية المياه المنتجة من المحطات الإرتوازى')
         watersae=fields.Float('كمية المياه المنتجة من محطات تحلية مياه بحار')
