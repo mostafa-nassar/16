@@ -5,11 +5,11 @@
         <field name="name">water_compony_form</field>
         <field name="model">water.comp</field>
         <field name="arch" type="xml">
-   <header>
+
+            <form>   <header>
                     <button name="%(startcompute)d" string="compute" type="action" class="oe_highlight"/>
 
                 </header>
-            <form>
                 <sheet>
 
 
