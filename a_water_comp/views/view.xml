@@ -7,13 +7,13 @@
         <field name="arch" type="xml">
 
             <form>
-                <header>
+
+                <sheet>
+
+         <header>
                     <button name="startcompute" string="compute" type="action" class="oe_highlight"/>
 
                 </header>
-                <sheet>
-
-
 
 
 
