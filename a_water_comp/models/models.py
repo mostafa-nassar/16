@@ -17,7 +17,7 @@ class waterComp(models.Model):
         watermajored = fields.Float('كمية المياه المنتجة المقاسة')
         waterunamaj = fields.Float('كمية المياه المنتجة الغير مقاسة')
 
-        resultwater = fields.Float('كمية المياه المنتجة',compute='calcu_sum')
+        resultwater = fields.Float('كمية المياه المنتجة',compute='calcu_sum',store=True)
 
         waterforsale = fields.Float('كمية المياه المشتراة بغرض البيع')
         wateravilabelforsale= fields.Float('كمية المياه المتاحة للبيع')
@@ -39,7 +39,7 @@ class waterComp(models.Model):
         wateramountmotile =fields.Float('كمية المياه المنتجة من المحطات النقالى')
         waterErtewazic=fields.Float('كمية المياه المنتجة من المحطات الإرتوازى')
         watersae=fields.Float('كمية المياه المنتجة من محطات تحلية مياه بحار')
-        reswater2= fields.Float('كمية المياه المنتجة',compute='calcu_sum2')
+        reswater2= fields.Float('كمية المياه المنتجة',compute='calcu_sum2',store=True)
 
         @api.depends('wtareamountfix', 'wateramountmotile', 'waterErtewazic','watersae','reswater2')
         def calcu_sum2(self):
@@ -48,7 +48,7 @@ class waterComp(models.Model):
 
         majordsaledwater=fields.Float('كمية المياه المباعة المقاسة')
         unmajordsaledwater=fields.Float('كمية المياه المباعة الغير مقاسة')
-        totalsaledwater=fields.Float('إجمالي كمية المياه المباعة'  , compute='calcu_sum3')
+        totalsaledwater=fields.Float('إجمالي كمية المياه المباعة'  , compute='calcu_sum3',store=True)
 
         @api.depends('majordsaledwater', 'unmajordsaledwater', 'totalsaledwater')
         def calcu_sum3(self):
@@ -72,7 +72,7 @@ class waterComp(models.Model):
         indus_usege = fields.Float(string='صناعي')
         sports_usege = fields.Float(string='أندية رياضية')
         other_usege = fields.Float(string='أخري')
-        total= fields.Float('الاجمالى'   , compute='calcu_sum4')
+        total= fields.Float('الاجمالى'   , compute='calcu_sum4',store=True)
 
 
 

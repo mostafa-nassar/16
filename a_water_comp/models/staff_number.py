@@ -29,7 +29,7 @@ class staff_number (models.Model):
 
         staffperglo=fields.Float('عدد العاملين بالديوان العام')
 
-        total=fields.Float('إجمالى عدد العاملين بالشركة',compute='calcu_sum')
+        total=fields.Float('إجمالى عدد العاملين بالشركة',compute='calcu_sum',store=True)
 
 
 
@@ -49,7 +49,7 @@ class staff_number (models.Model):
 
 
 
-        total2=fields.Float( 'إجمالى عدد العاملين بالشركة'  ,compute='calcu_sum2')
+        total2=fields.Float( 'إجمالى عدد العاملين بالشركة'  ,compute='calcu_sum2',store=True)
 
 
 

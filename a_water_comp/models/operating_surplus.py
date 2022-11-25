@@ -23,7 +23,7 @@ class operating_surplus (models.Model):
         itemsforsale = fields.Float('مبيعات بضائع مشتراة بغرض البيع')
         other = fields.Float('إيرادات تشغيلية أخرى')
 
-        totalSal = fields.Float('إجمالى إيرادات التشغيل' ,compute='calcu_sum')
+        totalSal = fields.Float('إجمالى إيرادات التشغيل' ,compute='calcu_sum',store=True)
 
         @api.depends('watersals','servtime','itemsforsale','other','totalSal')
         def calcu_sum(self):
