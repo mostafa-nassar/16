@@ -78,10 +78,10 @@ class waterComp(models.Model):
 
 
 
-        surfacestat = fields.Float('محطات سطحية' ,compute='calcu_sum00' ,store=True)
-        ertwez = fields.Float(' أبار إرتوازية', compute='calcu_sum01' ,store=True)
-        sewatst = fields.Float('محطات تحلية مياه بحار ' ,compute='calcu_sum02' ,store=True)
-        sum0 = fields.Float('كمية المياه المنتجة' ,compute='calcu_sum03' ,store=True)
+        surfacestat = fields.Float(' نسبة المياه المنتجه  / محطات سطحية' ,compute='calcu_sum00' ,store=True)
+        ertwez = fields.Float('نسبة المياه المنتجه  /  أبار إرتوازية', compute='calcu_sum03' ,store=True)
+        sewatst = fields.Float(' نسبة المياه المنتجه  / محطات تحلية مياه بحار ' ,compute='calcu_sum02' ,store=True)
+        sum0 = fields.Float(' نسبة كمية المياه المنتجة' ,compute='calcu_sum01' ,store=True)
 
 
         @api.depends('surfacestat','wtareamountfix','reswater2')
@@ -108,10 +108,10 @@ class waterComp(models.Model):
 
 
 
-        @api.depends('sewatst','watersae','reswater2')
-        def calcu_sum02(self):
+        @api.depends('ertwez','waterErtewazic','reswater2')
+        def calcu_sum03(self):
                 for rec in self:
-                        rec.sewatst=rec.watersae / rec.reswater2
+                        rec.ertwez=rec.waterErtewazic / rec.reswater2
 
 
 
