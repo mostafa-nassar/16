@@ -63,19 +63,19 @@
                                             <group>
 
                                                 <field name="watermajored" class="text-right"   />
-                                                <field name="unit1"/>
+<!--                                                <field name="unit1"/>-->
    <br/>
                                                 <field name="waterunamaj"/>
-                                                <field name="unit1"/>
+<!--                                                <field name="unit1"/>-->
                                                    <br/>
                                                 <field name="resultwater"/>
-                                                      <field name="unit1"/>
+<!--                                                      <field name="unit1"/>-->
                                                 <br/>
                                                           <field name="waterforsale"/>
-                                                      <field name="unit1"/>
+<!--                                                      <field name="unit1"/>-->
                                                    <br/>
                                                 <field name="wateravilabelforsale"/>
-                                                      <field name="unit1"/>
+<!--                                                      <field name="unit1"/>-->
                                             </group>
 
                                     <group>
