@@ -138,7 +138,7 @@
                             </group>
 
                                 <group>
-<group >
+
                                                            <h6>
                                 النسب المئوية
                             </h6>
@@ -152,7 +152,7 @@
                                     <br/>
                                     <field name="sum0"/>
                                     <br/>
-</group>
+
                 <group >
                                   <h4>البيان</h4>
                                 <br></br>
@@ -161,6 +161,8 @@
                         <field name="wateramountsaledper" /><br/>
                         <field name="wateramountunsaledper" />
                     </group>
+
+
                                 </group>
 
 
