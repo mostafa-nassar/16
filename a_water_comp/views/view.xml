@@ -95,75 +95,78 @@
                         <page col="2" string="بيان بكمية المياه المنتجة وفقاً لمصدر المحطات">
 
 
+                   <group>
+
+
+                          <group>
+                                    <h6>
+                                        البيان
+                                    </h6>
+                                    <br/>
+                                    <br/>
+
+                                    <field name="wtareamountfix"/>
+                                    <br/>
+                                    <field name="wateramountmotile"/>
+                                    <!--                                        <field name="unit1"/>-->
+                                    <br/>
+                                    <field name="waterErtewazic"/>
+                                    <!--                                        <field name="unit1"/>-->
+                                    <br/>
+                                    <field name="watersae"/>
+                                    <!--                                        <field name="unit1"/>-->
+                                    <br/>
+                                    <field name="reswater2"/>
+                                    <!--    <field name="unit1"/>-->
+                                    <br/>
+                                    <br/>
+                          </group>
+<group>
+                                    <h6>
+                                        البيان
+                                    </h6>
+                                    <br/>
+                                    <br/>
+                                    <field name="majordsaledwater"/>
+                                    <!--                                         <field name="unit2"/>-->
+                                    <br/>
+                                    <field name="unmajordsaledwater"/>
+                                    <!--                                         <field name="unit2"/>-->
+                                    <br/>
+                                    <field name="totalsaledwater"/>
+                                    <!--     <field name="unit1"/>-->
+</group>
+
+
 
                             <group>
-                                <group>
-         <h6>
-                                البيان
-                            </h6>
-                            <br/>
-                            <br/>
 
-                            <field name="wtareamountfix"/>
-                                                   <br/>
-                            <field name="wateramountmotile"/>
-<!--                                        <field name="unit1"/>-->
-                                                   <br/>
-                            <field name="waterErtewazic"/>
-<!--                                        <field name="unit1"/>-->
-                                                   <br/>
-                            <field name="watersae"/>
-<!--                                        <field name="unit1"/>-->
-                                                   <br/>
-                            <field name="reswater2"/>
-<!--    <field name="unit1"/>-->
-                                                   <br/>
-                                                   <br/>
-
-                                                                                   <h6>
-                                البيان
-                            </h6>
-                            <br/>
-                            <br/>
-                        <field name="majordsaledwater"/>
-<!--                                         <field name="unit2"/>-->
-                                                   <br/>
-                        <field name="unmajordsaledwater"/>
-<!--                                         <field name="unit2"/>-->
-                                                   <br/>
-                        <field name="totalsaledwater"/>
-<!--     <field name="unit1"/>-->
+                                <h6>
+                                    النسب المئوية
+                                </h6>
+                                <br/>
+                                <br/>
+                                <field name="surfacestat"/>
+                                <br/>
+                                <field name="ertwez"/>
+                                <br/>
+                                <field name="sewatst"/>
+                                <br/>
+                                <field name="sum0"/>
+                                <br/>
 
 
                             </group>
 
-                                <group>
-
-                                                           <h6>
-                                النسب المئوية
-                            </h6>
-                            <br/>
-                                    <br/>
-                                    <field name="surfacestat"/>
-                                    <br/>
-                                    <field name="ertwez"/>
-                                    <br/>
-                                    <field name="sewatst"/>
-                                    <br/>
-                                    <field name="sum0"/>
-                                    <br/>
-
-
-                                </group>
-
-                                         <group >
-                                  <h4>البيان</h4>
+                            <group >
+                                <h4>البيان</h4>
                                 <br></br>
                                 <br></br>
                                 <br></br>
-                        <field name="wateramountsaledper" /><br/>
-                        <field name="wateramountunsaledper" />
-                    </group>
+                                <field name="wateramountsaledper"/>
+                                <br/>
+                                <field name="wateramountunsaledper"/>
+                           </group>
 
 
 
