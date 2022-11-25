@@ -21,6 +21,8 @@ class waterComp(models.Model):
 
         waterforsale = fields.Float('كمية المياه المشتراة بغرض البيع')
         wateravilabelforsale= fields.Float('كمية المياه المتاحة للبيع')
+        watermatjorper = fields.Float('نسبة كمية الانتاج المقاس من المياه' ,compute='calc0' ,store=True)
+        unwatermatjorper = fields.Float('نسبة كمية الانتاج غير المقاس من المياه'  ,compute='calc1' ,store=True)
 
 
 
@@ -30,12 +32,21 @@ class waterComp(models.Model):
                         rec.resultwater=rec.waterunamaj + rec.watermajored
 
 
+        @api.depends('watermajored','resultwater','watermatjorper')
+        def calc0(self):
+                for rec in self:
+                        rec.watermatjorper = rec.watermajored / rec.waterunamaj
+
+        @api.depends('unwatermatjorper', 'watermatjorper')
+        def calc1(self):
+                for rec in self:
+                        rec.unwatermatjorper = 1 - rec.watermatjorper
 
 
 
 
 
-        wtareamountfix= fields.Float('كمية المياه المنتجة من المحطات الثابتة')
+wtareamountfix= fields.Float('كمية المياه المنتجة من المحطات الثابتة')
         wateramountmotile =fields.Float('كمية المياه المنتجة من المحطات النقالى')
         waterErtewazic=fields.Float('كمية المياه المنتجة من المحطات الإرتوازى')
         watersae=fields.Float('كمية المياه المنتجة من محطات تحلية مياه بحار')
