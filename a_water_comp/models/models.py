@@ -185,7 +185,7 @@ class waterComp(models.Model):
 
 
         house_usegeper = fields.Float(string='منزلى' ,compute='calcu0_house',store=True)
-        coomer_usegeper = fields.Float(string='تجارى', compute='calcu0_coomer',store=True)
+        coomer_usegeper = fields.Float(string='تجارى', compute='calcu0_comer',store=True)
         tour_usegeper = fields.Float(string='سياحى' ,compute='calcu0_tour',store=True)
         gove_usegeper = fields.Float(string='حكومى', compute='calcu0_gov',store=True)
         serv_usegeper = fields.Float(string='خدمي' ,compute='calc_serv',store=True)
@@ -201,7 +201,7 @@ class waterComp(models.Model):
 
 
         @api.depends('coomer_usegeper','coomer_usege','total')
-        def calcu0_coomer(self):
+        def calcu0_comer(self):
                 for rec in self:
                         rec.coomer_usegeper = rec.coomer_usege / rec.total
 
