@@ -6,8 +6,9 @@
         <field name="model">water.comp</field>
         <field name="arch" type="xml">
 
-            <form>   <header>
-                    <button name="%(startcompute)d" string="compute" type="action" class="oe_highlight"/>
+            <form>
+                <header>
+                    <button name="startcompute" string="compute" type="action" class="oe_highlight"/>
 
                 </header>
                 <sheet>
