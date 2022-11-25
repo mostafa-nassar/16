@@ -94,7 +94,7 @@
 
                         <page col="2" string="بيان بكمية المياه المنتجة وفقاً لمصدر المحطات">
 
-<group>
+
 
                             <group>
                                 <group>
@@ -138,7 +138,7 @@
                             </group>
 
                                 <group>
-
+<group >
                                                            <h6>
                                 النسب المئوية
                             </h6>
@@ -152,10 +152,8 @@
                                     <br/>
                                     <field name="sum0"/>
                                     <br/>
-
-
-                                </group>
-                                         <group >
+</group>
+                <group >
                                   <h4>البيان</h4>
                                 <br></br>
                                 <br></br>
@@ -163,9 +161,11 @@
                         <field name="wateramountsaledper" /><br/>
                         <field name="wateramountunsaledper" />
                     </group>
+                                </group>
+
 
                             </group>
-</group>
+
                         </page>
 
 <page string="بيان نسبة الصرف المعالج إلى الصرف المجمع">
