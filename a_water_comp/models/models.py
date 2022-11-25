@@ -120,25 +120,6 @@ class waterComp(models.Model):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         majordsaledwater=fields.Float('كمية المياه المباعة المقاسة')
         unmajordsaledwater=fields.Float('كمية المياه المباعة الغير مقاسة')
         totalsaledwater=fields.Float('إجمالي كمية المياه المباعة'  , compute='calcu_sum3',store=True)
@@ -147,6 +128,35 @@ class waterComp(models.Model):
         def calcu_sum3(self):
                 for rec in self:
                         rec.totalsaledwater = rec.majordsaledwater + rec.unmajordsaledwater
+
+
+        wateramountsaledper=fields.Float('نسبه كميه المياه المباعة المقاسة'  , compute='calcu_sum05',store=True)
+        wateramountunsaledper=fields.Float('نسبة كمية المياه المباعة الغير مقاسة'  , compute='calcu_sum06',store=True)
+
+        @api.depends('wateramountsaledper','majordsaledwater','totalsaledwater')
+        def calcu_sum05(self):
+                for rec in self:
+                        rec.wateramountsaledper = rec.majordsaledwater / rec.totalsaledwater
+
+        @api.depends('wateramountunsaledper','unmajordsaledwater','totalsaledwater')
+        def calcu_sum06(self):
+                for rec in self:
+                        rec.wateramountunsaledper = rec.unmajordsaledwater / rec.totalsaledwater
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         collecteedsoua=fields.Float('كمية الصرف المجمع ')
         collectedunprocsoa=fields.Float('كمية الصرف المجمع التى تصرف مباشرة على المصارف دون معالجة')

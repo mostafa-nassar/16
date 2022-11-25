@@ -155,6 +155,15 @@
 
 
                                 </group>
+                                         <group >
+                                  <h4>البيان</h4>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                        <field name="wateramountsaledper" /><br/>
+                        <field name="wateramountunsaledper" />
+                    </group>
+
                             </group>
 
                         </page>
@@ -233,7 +242,6 @@
 
 
                                 </group>
-
 
 
                             </group>
