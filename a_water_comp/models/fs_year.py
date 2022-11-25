@@ -6,4 +6,4 @@ class fiscalYear (models.Model):
         _description ='fiscal.year'
 
 
-        name = fields.Integer(string='السنه الماليه : ')
+        name = fields.Char(string='السنه الماليه : ')
