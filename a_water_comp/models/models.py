@@ -4,6 +4,7 @@ from odoo import models, fields, api
 class waterComp(models.Model):
         _name='water.comp'
         _description ='Regulatory Agency for drinking water, sanitation and consumer protection'
+        child_field_ids = fields.One2many('amount.child', 'amount_parent_field_id',string='نوع الاستخدام')
 
 
 
@@ -303,3 +304,22 @@ class waterComp(models.Model):
         blockwithsou=fields.Float('عدد العزب المخدومة بالصرف الصحى')
 
 
+
+
+
+
+class amount_child(models.Model):
+    _name = 'amount.child'
+
+    amount_child_field_1 = fields.Many2one('org.type')
+    amount_child_field_2 = fields.Integer(string="كميه المياه المباعة")
+    amount_parent_field_id = fields.Many2one('water.comp')
+
+
+
+
+
+
+class org_type(models.Model):
+    _name = 'org.type'
+    name = fields.Char('نوع الاستخدام')

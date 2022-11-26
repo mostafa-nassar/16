@@ -35,6 +35,7 @@
         'views/staff_number.xml',
         'views/collection_table.xml',
         'views/investment_projects.xml',
+        'views/org_type.xml',
 
     ],
     # only loaded in demonstration mode
