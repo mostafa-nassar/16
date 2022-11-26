@@ -9,6 +9,10 @@
             <form>
 
                 <sheet>
+<header>
+                        <button name="whats_chat" type="object" string="send massage" class="oe_highlight  " icon="fa-whatsapp" />
+
+</header>
 
 
 
@@ -33,6 +37,9 @@
                     <group>
                         <group>
                             <field name="componyName"/>
+                                                        <br/>
+                          <field name="phone" />
+
                         </group>
                         <group>
                             <field name="fiscalyear"/>

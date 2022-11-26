@@ -5,6 +5,7 @@ class waterComp(models.Model):
         _name='water.comp'
         _description ='Regulatory Agency for drinking water, sanitation and consumer protection'
         child_field_ids = fields.One2many('amount.child', 'amount_parent_field_id',string='نوع الاستخدام')
+        _rec_name = 'componyName'
 
 
 
@@ -303,6 +304,19 @@ class waterComp(models.Model):
         vlgwithsou=fields.Float('عدد القرى / المناطق المخدومة بالصرف الصحى')
         blockwithsou=fields.Float('عدد العزب المخدومة بالصرف الصحى')
 
+
+        phone = fields.Char(string=' رقم التليفون')
+
+        def whats_chat(self):
+            if not self.phone:
+                raise ValidationError(('no phone number'))
+            massage = 'hi%s' % self.componyName
+            whatsapp_url = 'https://api.whatsapp.com/send?phone=%s&text=%s' % (self.phone, massage)
+            return {
+                'type': 'ir.actions.act_url',
+                'target': 'new',
+                'url': whatsapp_url
+            }
 
 
 
