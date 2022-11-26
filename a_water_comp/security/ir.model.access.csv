@@ -12,8 +12,8 @@ access.investment.projects,access_investment_projects,A_water_comp.model_investm
 access.replacement.cost,access_replacement_cost,A_water_comp.model_replacement_cost,base.group_user,1,1,1,1
 access.staff.number,access_staff_number,A_water_comp.model_staff_number,base.group_user,1,1,1,1
 access.water.statement,access_water_statement,A_water_comp.model_water_statement,base.group_user,1,1,1,1
-access.amount.child,access_amount_child,A_water_comp.model_amount_child,base.group_user,1,1,1,1
 access.org.type,access_org_type,A_water_comp.model_org_type,base.group_user,1,1,1,1
+access.amount.child,access_amount_child,A_water_comp.model_amount_child,base.group_user,1,1,1,1
 
 
 
