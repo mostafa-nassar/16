@@ -1,4 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_water_comp,water.comp,model_water.comp,base.group_user,1,1,1,1
 
-access_amount_child,amount.child,model_amount_child,base.group_user,1,1,1,1
+"watercompony_security","water comp security file","a_water_comp.model_water_comp",,1,1,1,1
+
