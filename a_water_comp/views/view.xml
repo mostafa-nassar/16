@@ -99,9 +99,7 @@
 
 
                           <group>
-                                    <h6>
-                                        البيان
-                                    </h6>
+                                    <h4>المياه المنتجة حسب نوع المحطات</h4>
                                     <br/>
                                     <br/>
 
@@ -121,29 +119,9 @@
                                     <br/>
                                     <br/>
                           </group>
-<group>
-                                    <h6>
-                                        البيان
-                                    </h6>
-                                    <br/>
-                                    <br/>
-                                    <field name="majordsaledwater"/>
-                                    <!--                                         <field name="unit2"/>-->
-                                    <br/>
-                                    <field name="unmajordsaledwater"/>
-                                    <!--                                         <field name="unit2"/>-->
-                                    <br/>
-                                    <field name="totalsaledwater"/>
-                                    <!--     <field name="unit1"/>-->
-</group>
+                       <group>
 
-
-
-                            <group>
-
-                                <h6>
-                                    النسب المئوية
-                                </h6>
+                                <h4>النسب المئوية</h4>
                                 <br/>
                                 <br/>
                                 <field name="surfacestat"/>
@@ -157,9 +135,22 @@
 
 
                             </group>
+                     <group>
+                                    <h4>كمية المياه المباعة</h4>
+                                    <br/>
+                                    <br/>
+                                    <field name="majordsaledwater"/>
+                                    <!--                                         <field name="unit2"/>-->
+                                    <br/>
+                                    <field name="unmajordsaledwater"/>
+                                    <!--                                         <field name="unit2"/>-->
+                                    <br/>
+                                    <field name="totalsaledwater"/>
+                                    <!--     <field name="unit1"/>-->
+                        </group>
 
                             <group >
-                                <h4>البيان</h4>
+                                <h4>النسب المئوية</h4>
                                 <br></br>
                                 <br></br>
                                 <br></br>
