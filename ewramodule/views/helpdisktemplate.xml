@@ -1,205 +1,166 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
     <data>
-  <template id="ewra_ticketdescription" name="ewra_ticketdescription"  inherit_id="helpdesk.tickets_followup">
-        
-   
-    
-    
-    
-    
-    <xpath expr="//div[@name='description']" position="before">
-
-        <span class="row">
-
-        <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.complaincode">
-            <strong class="col-lg-2">كود الشكوى</strong>
-            <span class="col-lg-10" t-field="ticket.complaincode"/>
-        </div>
-
-            <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.complainername">
-                <strong class="col-lg-2">إسم الشاكى</strong>
-                <span class="col-lg-10" t-field="ticket.complainername"/>
-            </div>
-        </span>
+        <template id="ewra_ticketdescription" name="ewra_ticketdescription" inherit_id="helpdesk.tickets_followup">
 
 
-        <span class="row">
-            <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.national_id">
-                <strong class="col-lg-2">الرقم القومى</strong>
-                <span class="col-lg-10" t-field="ticket.national_id"/>
-            </div>
+            <xpath expr="//div[@name='description']" position="before">
 
-            <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.governate.name">
-                <strong class="col-lg-2">المحافظة</strong>
-                <span class="col-lg-10" t-field="ticket.governate.name"/>
-            </div>
+                <span class="row">
 
-            </span>
+                    <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.complaincode">
 
+                        <strong class="col-lg-6 col-md-6">كود الشكوى</strong>
+                        <div class="col-lg-6 col-md-6" t-field="ticket.complaincode" />
 
+                    </div>
 
-            <span class="row">
-            <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.city">
-                <strong class="col-lg-2">قسم/ قرية/ مركز</strong>
-                <span class="col-lg-10" t-field="ticket.city"/>
-            </div>
+                    <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.complainername">
+                        <strong class="col-lg-2">إسم الشاكى</strong>
+                        <div class="col-lg-10" t-field="ticket.complainername" />
+                    </div>
+                </span>
 
 
-            <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.adress">
-                <strong class="col-lg-2">عنوان الشاكى</strong>
-                <span class="col-lg-10" t-field="ticket.adress"/>
-            </div>
-            </span>
+                <span class="row">
+                    <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.national_id">
+                        <strong class="col-lg-2">الرقم القومى</strong>
+                        <div class="col-lg-10" t-field="ticket.national_id" />
+                    </div>
+
+                    <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.governate.name">
+                        <strong class="col-lg-2">المحافظة</strong>
+                        <div class="col-lg-10" t-field="ticket.governate.name" />
+                    </div>
+
+                </span>
 
 
+                <span class="row">
+                    <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.city">
+                        <strong class="col-lg-2">قسم/ قرية/ مركز</strong>
+                        <div class="col-lg-10" t-field="ticket.city" />
+                    </div>
 
 
+                    <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.adress">
+                        <strong class="col-lg-2">عنوان الشاكى</strong>
+                        <div class="col-lg-10" t-field="ticket.adress" />
+                    </div>
+                </span>
 
 
-            <span class="row">
-            <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.complainer_tele">
-                <strong class="col-lg-2">تليفون العميل</strong>
-                <span class="col-lg-10" t-field="ticket.complainer_tele"/>
-            </div>
+                <span class="row">
+                    <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.complainer_tele">
+                        <strong class="col-lg-2">تليفون العميل</strong>
+                        <div class="col-lg-10" t-field="ticket.complainer_tele" />
+                    </div>
 
 
-            <!-- <div class="row mb-4">
+                    <!-- <div class="row mb-4">
                 <strong class="col-lg-2">المحافظة</strong>
                 <span class="col-lg-10" t-field="ticket.complainername"/>
             </div> -->
 
 
-            <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.complaineremail">
-                <strong class="col-lg-2">البريد الإلكتروني</strong>
-                <span class="col-lg-10" t-field="ticket.complaineremail"/>
-            </div>
-            </span>
+                    <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.complaineremail">
+                        <strong class="col-lg-2">البريد الإلكتروني</strong>
+                        <div class="col-lg-10" t-field="ticket.complaineremail" />
+                    </div>
+                </span>
 
 
-            <span class="row">
+                <span class="row">
 
-            <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.complaintype.name">
-                <strong class="col-lg-2">نوع الشكوى</strong>
-                <span class="col-lg-10" t-field="ticket.complaintype.name"/>
-            </div>
+                    <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.complaintype.name">
+                        <strong class="col-lg-2">نوع الشكوى</strong>
+                        <div class="col-lg-10" t-field="ticket.complaintype.name" />
+                    </div>
 
 
-            <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.complainreason.name">
-                <strong class="col-lg-2">سبب الشكوي</strong>
-                <span class="col-lg-10" t-field="ticket.complainreason.name"/>
-            </div>
-            </span>
+                    <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.complainreason.name">
+                        <strong class="col-lg-2">سبب الشكوي</strong>
+                        <div class="col-lg-10" t-field="ticket.complainreason.name" />
+                    </div>
+                </span>
 
-            <!-- <div class="row mb-4">
+                <!-- <div class="row mb-4">
                 <strong class="col-lg-2">المحافظة</strong>
                 <span class="col-lg-10" t-field="ticket.complainername"/>
             </div> -->
 
-            <span class="row">
-            <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.subscriptionnumber">
-                <strong class="col-lg-2">رقم الاشتراك</strong>
-                <span class="col-lg-10" t-field="ticket.subscriptionnumber"/>
-            </div>
+                <span class="row">
+                    <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.subscriptionnumber">
+                        <strong class="col-lg-2">رقم الاشتراك</strong>
+                        <div class="col-lg-10" t-field="ticket.subscriptionnumber" />
+                    </div>
 
 
-            <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.areanumber">
-                <strong class="col-lg-2" >رقم المنطقة</strong>
-                <span class="col-lg-10" t-field="ticket.areanumber"/>
-            </div>
-            </span>
+                    <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.areanumber">
+                        <strong class="col-lg-2">رقم المنطقة</strong>
+                        <div class="col-lg-10" t-field="ticket.areanumber" />
+                    </div>
+                </span>
 
 
-
-            <span class="row">
-            <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.responsableparty">
-                <strong class="col-lg-2">الجهة المسئولة</strong>
-                <span class="col-lg-10" t-field="ticket.responsableparty"/>
-            </div>
-            <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.serviceprovider">
-                <strong class="col-lg-2">مقدم الخدمة</strong>
-                <span class="col-lg-10" t-field="ticket.serviceprovider"/>
-            </div>
-            </span>
-
+                <span class="row">
+                    <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.responsableparty">
+                        <strong class="col-lg-2">الجهة المسئولة</strong>
+                        <div class="col-lg-10" t-field="ticket.responsableparty" />
+                    </div>
+                    <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.serviceprovider">
+                        <strong class="col-lg-2">مقدم الخدمة</strong>
+                        <div class="col-lg-10" t-field="ticket.serviceprovider" />
+                    </div>
+                </span>
 
 
-            <span class="row">
-            <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.reportingcode">
-                <strong class="col-lg-2">كود الشكوي لدي مقدم الخدمة</strong>
-                <span class="col-lg-10" t-field="ticket.reportingcode"/>
-            </div>
-            <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.complaindate">
-                <strong class="col-lg-2">تاريخ الإبلاغ</strong>
-                <span class="col-lg-10" t-field="ticket.complaindate"/>
-            </div>
-            </span>
+                <span class="row">
+                    <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.reportingcode">
+                        <strong class="col-lg-2">كود الشكوي لدي مقدم الخدمة</strong>
+                        <div class="col-lg-10" t-field="ticket.reportingcode" />
+                    </div>
+                    <div class="col-md-6 col-sm-10 mb-4" t-if="ticket.complaindate">
+                        <strong class="col-lg-2">تاريخ الإبلاغ</strong>
+                        <div class="col-lg-10" t-field="ticket.complaindate" />
+                    </div>
+                </span>
 
 
+                <div class="row mb-4" t-if="ticket.providerresponse">
+                    <strong class="col-lg-2">تاريخ رد الشركة</strong>
+                    <div class="col-lg-10" t-field="ticket.complainresponsedate" />
+                </div>
+
+                <div class="row mb-4" t-if="ticket.providerresponse">
+                    <strong class="col-lg-2">رد مقدم الخدمة</strong>
+                    <div class="col-lg-10" t-field="ticket.providerresponse" />
+
+                </div>
 
 
-            
-            <div class="row mb-4" t-if="ticket.providerresponse">
-                <strong class="col-lg-2">تاريخ رد الشركة</strong>
-                <span class="col-lg-10" t-field="ticket.complainresponsedate"/>
-            </div> 
-
-            <div class="row mb-4" t-if="ticket.providerresponse">
-                <strong class="col-lg-2">رد مقدم الخدمة</strong>
-                <span class="col-lg-10" t-field="ticket.providerresponse"/>
-              
-            </div> 
-            
-
-            
-
-
-
+            </xpath>
+            <xpath expr="//div[@name='description']" position="after">
+                <span t-if="ticket.providerresponse=='' and request.session.usertype == 'complainers'" class="ewraportalresponseclass">
+                    <form id="ewraportalresponse" name="ewraportalresponse">
+                        <div class="form-group">
+                            <label for="response">رد مقدم الخدمة</label>
+                            <textarea name="response" required="1" id="response" class="form-control"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary">الرد </button>
+                        </div>
+                        <input type='hidden' name="tecketsendid" id="tecketsendid" t-att-value="ticket.id" />
+                    </form>
+                </span>
+            </xpath>
 
 
-
-
-
-
-
-
-        </xpath>
-        <xpath expr="//div[@name='description']" position="after">
-            <span t-if="ticket.providerresponse=='' and request.session.usertype == 'complainers'" class="ewraportalresponseclass">
-            <form id="ewraportalresponse" name="ewraportalresponse" >
-                <div class="form-group">
-                    <label for="response">رد مقدم الخدمة</label>
-                <textarea name="response" required="1" id="response" class="form-control"></textarea>
-            </div>
-                <div><button type="submit" class="btn btn-primary" >الرد </button></div>
-                <input type='hidden' name="tecketsendid" id="tecketsendid" t-att-value="ticket.id"/>
-            </form>
-        </span>
-        </xpath>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-       </template>
+        </template>
 
     </data>
-    </odoo>
-    
-     
+</odoo>
+
 <!-- <template  xml:space="preserve">
     <t t-name="helpdesk.tickets_followup_ewra" t-extend="helpdesk.tickets_followup">
         <t t-jquery="div.description" t-operation="before">
