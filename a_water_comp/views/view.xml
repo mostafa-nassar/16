@@ -191,8 +191,11 @@
 
 </page>
 
+
+</page>
+
                         <page string="كمية المياه المباعة وفقاً لفئات المحاسبة" >
-                            <group col="2" >
+                            <group col="1" >
 
 <!--                                <group >-->
 <!--                                    <h4>البيان</h4>-->
@@ -227,8 +230,6 @@
 
 <!--                                </group>-->
 
-
-
 <group>
 
                             <field name="child_field_ids">
@@ -237,13 +238,19 @@
                                 <tree editable="battom">
                                     <field name="amount_child_field_1" />
                                     <field name="amount_child_field_2"/>
+                                    <field name="amount_child_field_3" />
+                                    <field name="amount_child_field_4"/>
+                                    <field name="amount_child_field_5"/>
 
                                 </tree>
 
                                 <form>
                                     <group>
-                                     <field name="amount_child_field_1" />
+                                    <field name="amount_child_field_1" />
                                     <field name="amount_child_field_2"/>
+                                    <field name="amount_child_field_3" />
+                                    <field name="amount_child_field_4"/>
+                                    <field name="amount_child_field_5"/>
                                     </group>
                                 </form>
 
@@ -252,9 +259,7 @@
 
                             </field>
 </group>
-
-
-
+<group col="2">
                                 <group >
                                     <h4>النسب المئوية</h4>
                                 <br></br>
@@ -302,13 +307,17 @@
 
 
                                 </group>
-
+</group>
 
                             </group>
 
 
 
                         </page>
+
+
+
+
 
                     <page string="خدمة مياه الشرب/الصرف الصحى"  col="2">
 <br></br>

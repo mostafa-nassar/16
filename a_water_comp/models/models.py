@@ -308,11 +308,17 @@ class waterComp(models.Model):
 
 
 
+
+
 class amount_child(models.Model):
     _name = 'amount.child'
 
-    amount_child_field_1 = fields.Many2one('org.type')
-    amount_child_field_2 = fields.Integer(string="كميه المياه المباعة")
+    amount_child_field_1 = fields.Many2one('org.type',string='نوع الاستخدام')
+    amount_child_field_2 = fields.Float(string="كميه المياه المباعة")
+    amount_child_field_3 = fields.Char(string="القيمه")
+    amount_child_field_4 = fields.Char(string="النسبة")
+    amount_child_field_5 = fields.Char(string="وحدة القياس")
+
     amount_parent_field_id = fields.Many2one('water.comp')
 
 
