@@ -26,7 +26,7 @@ class waterComp(models.Model):
         unwatermatjorper = fields.Float('نسبة كمية الانتاج غير المقاس من المياه'  ,compute='calc1' ,store=True)
 
 
-        surfacestat = fields.Float('محطات سطحية' )
+        surfacestat = fields.Float('محطات سطحية')
         ertwez = fields.Float(' أبار إرتوازية' )
         sewatst = fields.Float('محطات تحلية مياه بحار ' )
         sum0 = fields.Float('كمية المياه المنتجة' )
