@@ -194,40 +194,67 @@
                         <page string="كمية المياه المباعة وفقاً لفئات المحاسبة" >
                             <group col="2" >
 
-                                <group >
-                                    <h4>البيان</h4>
+<!--                                <group >-->
+<!--                                    <h4>البيان</h4>-->
+<!--                                <br></br>-->
+<!--                                <br></br>-->
+<!--                                <br></br>-->
+<!--                                <field name="house_usege" />-->
+<!--&lt;!&ndash;                                     <field name="unit1"/>&ndash;&gt;-->
+<!--                                                   <br/>-->
+<!--                                <field name="coomer_usege" />-->
+<!--&lt;!&ndash;                                     <field name="unit1"/>&ndash;&gt;-->
+<!--                                                   <br/>-->
+<!--                                <field name="tour_usege" />-->
+<!--&lt;!&ndash;                                     <field name="unit1"/>&ndash;&gt;-->
+<!--                                                   <br/>-->
+<!--                                <field name="gove_usege" />-->
+<!--&lt;!&ndash;                                     <field name="unit1"/>&ndash;&gt;-->
+<!--                                                   <br/>-->
+<!--                                <field name="serv_usege" />-->
+<!--&lt;!&ndash;                                     <field name="unit1"/>&ndash;&gt;-->
+<!--                                                   <br/>-->
+<!--                                <field name="indus_usege" />-->
+<!--&lt;!&ndash;                                     <field name="unit1"/>&ndash;&gt;-->
+<!--                                                   <br/>-->
+<!--                                <field name="sports_usege" />-->
+<!--&lt;!&ndash;                                     <field name="unit1"/>&ndash;&gt;-->
+<!--                                                   <br/>-->
+<!--                                <field name="other_usege" />-->
+<!--&lt;!&ndash;                                     <field name="unit1"/>&ndash;&gt;-->
+<!--                                                   <br/>-->
+<!--                                <field name="total" />-->
+
+<!--                                </group>-->
+
+
+<group>
+                                        <h4>البيان</h4>
                                 <br></br>
                                 <br></br>
                                 <br></br>
-                                <field name="house_usege" />
-<!--                                     <field name="unit1"/>-->
-                                                   <br/>
-                                <field name="coomer_usege" />
-<!--                                     <field name="unit1"/>-->
-                                                   <br/>
-                                <field name="tour_usege" />
-<!--                                     <field name="unit1"/>-->
-                                                   <br/>
-                                <field name="gove_usege" />
-<!--                                     <field name="unit1"/>-->
-                                                   <br/>
-                                <field name="serv_usege" />
-<!--                                     <field name="unit1"/>-->
-                                                   <br/>
-                                <field name="indus_usege" />
-<!--                                     <field name="unit1"/>-->
-                                                   <br/>
-                                <field name="sports_usege" />
-<!--                                     <field name="unit1"/>-->
-                                                   <br/>
-                                <field name="other_usege" />
-<!--                                     <field name="unit1"/>-->
-                                                   <br/>
-                                <field name="total" />
 
-                                </group>
+                            <field name="child_field_ids">
 
 
+                                <tree editable="battom">
+                                    <field name="amount_child_field_1" />
+                                    <field name="amount_child_field_2"/>
+
+                                </tree>
+
+                                <form>
+                                    <group>
+                                     <field name="amount_child_field_1" />
+                                    <field name="amount_child_field_2"/>
+                                    </group>
+                                </form>
+
+
+
+
+                            </field>
+</group>
 
                                 <group >
                                     <h4>النسب المئوية</h4>

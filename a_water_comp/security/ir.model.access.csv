@@ -1,5 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_waterComp_waterComp,waterComp.waterComp,model_waterComp_waterComp,base.group_user,1,1,1,1
+access.water.comp,access_water_comp,A_water_comp.model_water_comp,base.group_user,1,1,1,1
+
 
 access.collection.table,access_collection_table,A_water_comp.model_collection_table,base.group_user,1,1,1,1
 access.compony_name,access_compony_name,A_water_comp.model_compony_name,base.group_user,1,1,1,1
