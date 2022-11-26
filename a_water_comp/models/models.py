@@ -310,7 +310,7 @@ class waterComp(models.Model):
         def whats_chat(self):
             if not self.phone:
                 raise ValidationError(('no phone number'))
-            massage = 'hi%s' % self.componyName
+            massage = 'hi'
             whatsapp_url = 'https://api.whatsapp.com/send?phone=%s&text=%s' % (self.phone, massage)
             return {
                 'type': 'ir.actions.act_url',
