@@ -1,4 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 
 "watercompony_security","water comp security file","a_water_comp.model_water_comp",,1,1,1,1
+"amountchild_security","amount child security file","a_water_comp.model_amount_child",,1,1,1,1
+"orgtype_security","org type security file","a_water_comp.model_org_type",,1,1,1,1
 
