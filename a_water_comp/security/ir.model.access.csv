@@ -1,3 +1,17 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_waterComp_waterComp,waterComp.waterComp,model_waterComp_waterComp,base.group_user,1,1,1,1
 
+access.collection.table,access_collection_table,A_water_comp.model_collection_table,base.group_user,1,1,1,1
+access.compony_name,access_compony_name,A_water_comp.model_compony_name,base.group_user,1,1,1,1
+access.costpercubic.mod,access_costpercubic_mod,A_water_comp.model_costpercubic_mod,base.group_user,1,1,1,1
+access.electricity.mod,access_electricity_mod,A_water_comp.model_electricity_mod,base.group_user,1,1,1,1
+access.fiscal.year,access_fiscal_year,A_water_comp.model_fiscal_year,base.group_user,1,1,1,1
+access.operating.surplus,access_operating_surplus,A_water_comp.model_operating_surplus,base.group_user,1,1,1,1
+access.investment.projects,access_investment_projects,A_water_comp.model_investment_projects,base.group_user,1,1,1,1
+access.replacement.cost,access_replacement_cost,A_water_comp.model_replacement_cost,base.group_user,1,1,1,1
+access.staff.number,access_staff_number,A_water_comp.model_staff_number,base.group_user,1,1,1,1
+access.water.statement,access_water_statement,A_water_comp.model_water_statement,base.group_user,1,1,1,1
+access.amount.child,access_amount_child,A_water_comp.model_amount_child,base.group_user,1,1,1,1
+access.org.type,access_org_type,A_water_comp.model_org_type,base.group_user,1,1,1,1
+
+
