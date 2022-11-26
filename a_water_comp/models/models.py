@@ -48,6 +48,7 @@ class waterComp(models.Model):
         @api.depends('watermajored','resultwater','watermatjorper')
         def calc0(self):
                 for rec in self:
+                    if rec.resultwater > 0:
                         rec.watermatjorper = rec.watermajored / rec.resultwater
 
         @api.depends('unwatermatjorper', 'watermatjorper')
@@ -87,6 +88,7 @@ class waterComp(models.Model):
         @api.depends('surfacestat','wtareamountfix','reswater2')
         def calcu_sum00(self):
                 for rec in self:
+                    if rec.reswater2 > 0:
                         rec.surfacestat=rec.wtareamountfix / rec.reswater2
 
 
@@ -102,6 +104,7 @@ class waterComp(models.Model):
         @api.depends('sewatst','watersae','reswater2')
         def calcu_sum02(self):
                 for rec in self:
+                    if rec.reswater2 > 0:
                         rec.sewatst=rec.watersae / rec.reswater2
 
 
@@ -111,6 +114,7 @@ class waterComp(models.Model):
         @api.depends('ertwez','waterErtewazic','reswater2')
         def calcu_sum03(self):
                 for rec in self:
+                    if rec.reswater2 > 0:
                         rec.ertwez=rec.waterErtewazic / rec.reswater2
 
 
@@ -136,11 +140,13 @@ class waterComp(models.Model):
         @api.depends('wateramountsaledper','majordsaledwater','totalsaledwater')
         def calcu_sum05(self):
                 for rec in self:
+                    if rec.totalsaledwater > 0:
                         rec.wateramountsaledper = rec.majordsaledwater / rec.totalsaledwater
 
         @api.depends('wateramountunsaledper','unmajordsaledwater','totalsaledwater')
         def calcu_sum06(self):
                 for rec in self:
+                    if rec.totalsaledwater > 0:
                         rec.wateramountunsaledper = rec.unmajordsaledwater / rec.totalsaledwater
 
 
@@ -197,24 +203,28 @@ class waterComp(models.Model):
         @api.depends('house_usegeper','house_usege','total')
         def calcu0_house(self):
                 for rec in self:
+                    if rec.total > 0:
                         rec.house_usegeper = rec.house_usege / rec.total
 
 
         @api.depends('coomer_usegeper','coomer_usege','total')
         def calcu0_comer(self):
                 for rec in self:
+                    if rec.total > 0:
                         rec.coomer_usegeper = rec.coomer_usege / rec.total
 
 
         @api.depends('tour_usegeper','tour_usege','total')
         def calcu0_tour(self):
                 for rec in self:
+                    if rec.total > 0:
                         rec.tour_usegeper = rec.tour_usege / rec.total
 
 
         @api.depends('gove_usegeper','gove_usege','total')
         def calcu0_gov(self):
                 for rec in self:
+                    if rec.total > 0:
                         rec.gove_usegeper = rec.gove_usege / rec.total
 
 
@@ -222,12 +232,14 @@ class waterComp(models.Model):
         @api.depends('serv_usegeper','serv_usege','total')
         def calc_serv(self):
                 for rec in self:
+                    if rec.total > 0:
                         rec.serv_usegeper = rec.serv_usege / rec.total
 
 
         @api.depends('indus_usegeper','indus_usege','total')
         def calc_indus(self):
                 for rec in self:
+                    if rec.total > 0:
                         rec.indus_usegeper = rec.indus_usege / rec.total
 
 
@@ -236,6 +248,7 @@ class waterComp(models.Model):
         @api.depends('sports_usegeper','sports_usege','total')
         def calc_sports(self):
                 for rec in self:
+                    if rec.total > 0:
                         rec.sports_usegeper = rec.sports_usege / rec.total
 
 
@@ -243,6 +256,7 @@ class waterComp(models.Model):
         @api.depends('other_usegeper','other_usege','total')
         def calc_other(self):
                 for rec in self:
+                    if rec.total > 0:
                         rec.other_usegeper = rec.other_usege / rec.total
 
 
