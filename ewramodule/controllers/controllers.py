@@ -26,6 +26,16 @@ from odoo.http import request
 class WebsiteHelpdesk_portal(http.Controller):
     #@http.route('''/ewra-helpdesk-data''', type='json', auth="user", website=True,
       #          sitemap=True)
+    @http.route('''/searchcomplaint''', type='http', auth="public", website=True,
+                sitemap=True) 
+    def searchcomplaint(self,**kwargs):
+        if kwargs['complaintid']:
+            complaints=request.env['helpdesk.ticket'].sudo().search(['|',('national_id','=',kwargs['complaintid']),('complaincode','=',kwargs['complaintid'])])
+        else:
+            complaints=None
+        return request.render("ewramodule.ewrasearchresult",{
+            'complaints':complaints
+        })
     @http.route('''/ewra-helpdesk-data''', type='json', auth="public", website=True,
                 sitemap=True)
     def website_helpdesk_view(self, **kwargs):
