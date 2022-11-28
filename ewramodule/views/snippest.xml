@@ -532,7 +532,7 @@
                             <footer class="blockquote-footer"><cite title="Source Title">رد الشكوي</cite></footer>
                           </blockquote>
 
-                        <t t-esc="complain.providerresponse"/>
+                        <!-- <t t-esc="complain.providerresponse"/> -->
                     </t>
                     
                     <t t-else="">
