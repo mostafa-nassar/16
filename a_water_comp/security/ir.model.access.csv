@@ -3,4 +3,3 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 "watercompony_security","water comp security file","a_water_comp.model_water_comp",base.group_user,1,1,1,1
 "amountchild_security","amount child security file","a_water_comp.model_amount_child",base.group_user,1,1,1,1
 "orgtype_security","org type security file","a_water_comp.model_org_type",base.group_user,1,1,1,1
-

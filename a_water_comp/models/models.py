@@ -9,6 +9,39 @@ class waterComp(models.Model):
 
 
 
+        #defult add activ records
+
+        @api.model # to inherit  at models levels
+        def default_get(self,fields):
+            res = super(waterComp, self).default_get(fields) # inherit of main models wich contain one2many field
+            child_field_ids = [(5,0,0)] #tuble to clear or deleat one2many valeues
+            product_rec = self.env['org.type'].search([]) #to search in prg type module
+            for pro in product_rec:
+                line=(0,0,{
+                    'amount_child_field_1':pro.id # add all org.type feilds id to one2many
+                })
+                if pro.activ == True:
+                    child_field_ids.append(line)  # add  previous tuple values to one2many
+
+            res.update({
+                'child_field_ids': child_field_ids
+            })
+            return res
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         fiscalyear = fields.Many2one('fiscal.year', string='السنه الماليه  ')
         componyName = fields.Many2one('compony_name', string='أسم الشركة  ')
 
@@ -343,3 +376,5 @@ class amount_child(models.Model):
 class org_type(models.Model):
     _name = 'org.type'
     name = fields.Char('نوع الاستخدام')
+    activ = fields.Boolean('النشاط')
+

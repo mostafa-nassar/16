@@ -246,7 +246,7 @@
                                     <field name="amount_child_field_1" />
                                     <field name="amount_child_field_2"/>
                                     <field name="amount_child_field_3" />
-                                    <field name="amount_child_field_4"/>
+                                    <field name="amount_child_field_4"  widget="percentage"/>
                                     <field name="amount_child_field_5"/>
 
                                 </tree>
@@ -256,7 +256,7 @@
                                     <field name="amount_child_field_1" />
                                     <field name="amount_child_field_2"/>
                                     <field name="amount_child_field_3" />
-                                    <field name="amount_child_field_4"/>
+                                    <field name="amount_child_field_4"  widget="percentage"/>
                                     <field name="amount_child_field_5"/>
                                     </group>
                                 </form>
